@@ -15,6 +15,8 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Hash;
+
 
 class UserResource extends Resource
 {
@@ -29,10 +31,12 @@ class UserResource extends Resource
             TextInput::make('name')->required(),
             TextInput::make('email')->required()->email(),
             TextInput::make('password')
-                ->password()
-                ->dehydrateStateUsing(fn ($state) => filled($state) ? $state : null)
-                ->required(fn (string $context) => $context === 'create')
-                ->label('Password'),
+            ->label('Password')
+            ->password()
+            ->dehydrateStateUsing(fn ($state) => filled($state) ? Hash::make($state) : null)
+            ->dehydrated(fn ($state) => filled($state)) // لا يتم حفظ الحقل إن لم يتم إدخال قيمة
+            ->required(fn (string $context): bool => $context === 'create')
+            ->autocomplete('new-password'),
             Select::make('role')
                 ->label('role')
                 ->options([

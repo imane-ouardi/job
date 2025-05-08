@@ -10,7 +10,7 @@ class JobFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->jobTitle,
+            'title' => $this->faker->jobTitle,        
             'description' => $this->faker->paragraph(3),
             'type' => $this->faker->randomElement(['Full-time', 'Part-time', 'Remote']),
             'location' => $this->faker->city,
@@ -20,5 +20,6 @@ class JobFactory extends Factory
             'deadline' => now()->addDays(rand(10, 60)),
             'created_by_email' => Auth::check() ? Auth::user()->email : 'default@example.com',
         ];
+
     }
 }

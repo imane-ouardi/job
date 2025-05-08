@@ -1,17 +1,16 @@
 <section
   id="about"
-  class="bg-gray-50 pb-12 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]"
+  class="bg-gray-50 pb-12 pt-20  lg:pb-[70px] lg:pt-[120px]"
 >
   <div class="container px-4 mx-auto">
     <div class="wow fadeInUp" data-wow-delay=".2s">
       <div class="flex flex-wrap items-center -mx-4">
-        <!-- النص -->
         <div class="w-full px-4 lg:w-1/2">
           <div class="mb-12 max-w-[540px] lg:mb-0">
-            <h2 class="mb-5 text-3xl font-extrabold leading-tight text-blue-900 dark:text-white sm:text-4xl md:text-[40px] sm:leading-[1.2]">
+            <h2 class="mb-5 text-3xl font-extrabold leading-tight text-blue-900  sm:text-4xl md:text-[40px] sm:leading-[1.2]">
               The Smartest Way to Find Your Next Job
             </h2>
-            <p class="mb-10 text-lg leading-relaxed text-blue-800 dark:text-gray-300">
+            <p class="mb-10 text-lg leading-relaxed text-blue-800 ">
               Our platform connects top talents with leading companies. Whether you are a job seeker or an employer, we make the process simple, fast, and effective.  
               <br /><br />
               Enjoy advanced search, instant matching, and a supportive team ready to help you 24/7. Start your career journey with us today!
@@ -24,7 +23,6 @@
             </a>
           </div>
         </div>
-        <!-- الصور والإحصائية -->
         <div class="w-full px-4 lg:w-1/2">
           <div class="flex flex-wrap -mx-2 sm:-mx-4 lg:-mx-2 xl:-mx-4">
             <div class="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
@@ -50,7 +48,6 @@
                   <span class="block text-base font-semibold text-white">Years of Experience</span>
                   <span class="block text-base font-medium text-white text-opacity-70">in Recruitment</span>
                 </div>
-                <!-- زخارف SVG -->
                 <span class="absolute top-0 left-0 -z-10 opacity-30">
                   <svg width="106" height="144" viewBox="0 0 106 144" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect opacity="0.1" x="-67" y="47.127" width="113.378" height="131.304" transform="rotate(-42.8643 -67 47.127)" fill="url(#paint0_linear_1416_214)" />

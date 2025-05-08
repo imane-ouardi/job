@@ -1,7 +1,18 @@
 <x-head/>
-<body class="dark:bg-slate-900">
+<body class="">
     <div>
       <x-navsec/>
+        <!-- ====== Hero Section Start ====== -->
+    <section class="relative w-full min-h-[60vh] flex flex-col justify-center bg-gradient-to-br from-blue-700 via-blue-900 to-blue-700 bg-cover">
+      <div class="absolute inset-0 bg-blue-900/80"></div>
+      <div class="container relative z-10 mx-auto px-4 py-24 flex flex-col items-center text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
+          Contact page
+        </h1>
+        
+      </div>
+    </section>
+    <!-- ====== Hero Section End ====== -->
       <section id="contact" class="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100">
         <div class="container mx-auto px-4">
           <div class="flex flex-col lg:flex-row items-center gap-16">
@@ -13,23 +24,10 @@
               <p class="text-blue-800 mb-8 text-center">
                 Fill out the form and our team will get back to you within 24 hours.
               </p>
-              <form>
-                <div class="mb-5">
-                  <label class="block mb-2 text-sm font-medium text-blue-900">Full Name</label>
-                  <input type="text" class="w-full border border-gray-200 rounded-md py-3 px-4 text-blue-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition" placeholder="Your Name">
-                </div>
-                <div class="mb-5">
-                  <label class="block mb-2 text-sm font-medium text-blue-900">Email</label>
-                  <input type="email" class="w-full border border-gray-200 rounded-md py-3 px-4 text-blue-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition" placeholder="you@email.com">
-                </div>
-                <div class="mb-5">
-                  <label class="block mb-2 text-sm font-medium text-blue-900">Message</label>
-                  <textarea class="w-full border border-gray-200 rounded-md py-3 px-4 text-blue-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition resize-none" rows="4" placeholder="Type your message..."></textarea>
-                </div>
-                <button type="submit" class="w-full py-3 rounded-lg bg-blue-600 text-white font-semibold text-lg hover:bg-blue-800 transition">
-                  Send Message
-                </button>
-              </form>
+               <livewire:contact-form />
+               @livewireScripts
+
+
             </div>
             <!-- معلومات التواصل -->
             <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">

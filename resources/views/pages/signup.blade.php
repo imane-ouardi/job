@@ -7,65 +7,53 @@
     <!-- ====== Navbar Section Start -->
     <x-navsec/>
     <!-- ====== Navbar Section End -->
+     <!-- ====== Hero Section Start ====== -->
+     <section class="relative w-full min-h-[60vh] flex flex-col justify-center bg-gradient-to-br from-blue-700 via-blue-900 to-blue-700 bg-cover">
+      <div class="absolute inset-0 bg-blue-900/80"></div>
+      <div class="container relative z-10 mx-auto px-4 py-24 flex flex-col items-center text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
+          Sign Up Page
+        </h1>
+        <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-8 drop-shadow">
+          There are many variations of passages of Lorem Ipsum available.
+        </p>
 
-    <!-- ====== Banner Section Start -->
-    <div
-      class="relative z-10 overflow-hidden pt-[120px] pb-[60px] md:pt-[130px] lg:pt-[160px] dark:bg-dark"
-    >
-      <div
-        class="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-stroke/0 via-stroke dark:via-dark-3 to-stroke/0"
-      ></div>
-      <div class="container mx-auto px-4">
-        <div class="flex flex-wrap items-center -mx-4">
-          <div class="w-full px-4">
-            <div class="text-center">
-              <h1
-                class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
-              >
-                Sign Up Page
-              </h1>
-              <p class="mb-5 text-base text-body-color dark:text-dark-6">
-                There are many variations of passages of Lorem Ipsum available.
-              </p>
-
-              <ul class="flex items-center justify-center gap-[10px]">
-                <li>
-                  <a
-                    href="{{ route('home') }}"
-                    class="flex items-center gap-[10px] text-base font-medium text-dark dark:text-white"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    class="flex items-center gap-[10px] text-base font-medium text-body-color"
-                  >
-                    <span class="text-body-color dark:text-dark-6"> / </span>
-                    Sign Up
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        
+        <ul class="flex items-center justify-center gap-[10px]">
+          <li>
+            <a
+              href="{{ route('home') }}"
+              class="flex items-center gap-[10px] text-base font-medium text-white "
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="javascript:void(0)"
+              class="flex items-center gap-[10px] text-base font-medium text-white"
+            >
+              <span class="text-white "> / </span>
+              Sign Up
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <!-- ====== Banner Section End -->
+    </section>
+    <!-- ====== Hero Section End ====== -->
 
     <!-- ====== Forms Section Start -->
-    <section class="bg-[#F4F7FF] py-14 lg:py-20 dark:bg-dark">
+    <section class="bg-[#F4F7FF] py-14 lg:py-20 ">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
           <div class="w-full px-4">
             <div
-              class="relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white dark:bg-dark-2 py-14 px-8 text-center sm:px-12 md:px-[60px]"
+              class="relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white -2 py-14 px-8 text-center sm:px-12 md:px-[60px]"
             >
               <div class="mb-10 text-center">
                 <a href="javascript:void(0)" class="mx-auto inline-block max-w-[160px]">
-                  <img src="assets/images/logo/logo.svg" alt="logo" class="dark:hidden" />
-                  <img src="assets/images/logo/logo-white.svg" alt="logo" class="hidden dark:block" />
+                  <img src="assets/images/logo/logoo.png" alt="logo" class="" />
+                  <img src="assets/images/logo/logoo.png" alt="logo" class="hidden " />
                 </a>
               </div>
     
@@ -110,7 +98,7 @@
     <!-- ====== Back To Top End -->
 
     <!-- ====== Made With Button Start -->
-    />
+   
     <!-- ====== Made With Button End -->
 
     <!-- ====== All Scripts -->

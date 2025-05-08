@@ -1,24 +1,37 @@
-<x-head/>
-<body class="dark:bg-dark">
+{{-- <x-head/>
+<body class="">
   <x-navsec/>
+   <!-- ====== Hero Section Start ====== -->
+    <section class="relative w-full min-h-[60vh] flex flex-col justify-center bg-gradient-to-br from-blue-700 via-blue-900 to-blue-700 bg-cover">
+      <div class="absolute inset-0 bg-blue-900/80"></div>
+      <div class="container relative z-10 mx-auto px-4 py-24 flex flex-col items-center text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
+          Job Vacancies
+        </h1>
+        <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-8 drop-shadow">
+          Find your next opportunity among thousands of jobs from top companies.
+        </p>
+      </div>
+    </section>
+    <!-- ====== Hero Section End ====== -->
 
   <!-- ====== Banner Section Start ====== -->
-  <div class="relative z-10 overflow-hidden pb-[60px] pt-[120px] dark:bg-dark md:pt-[130px] lg:pt-[160px]">
+  <div class="relative z-10 overflow-hidden pb-[60px] pt-[120px]  md:pt-[130px] lg:pt-[160px]">
     <div class="container mx-auto px-4">
       <div class="text-center">
-        <h1 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+        <h1 class="mb-4 text-3xl font-bold text-dark  sm:text-4xl md:text-[40px] md:leading-[1.2]">
           {{ $blog->title }}
         </h1>
-        <p class="mb-5 text-base text-body-color dark:text-dark-6">
+        <p class="mb-5 text-base text-body-color ">
           {{ $blog->excerpt ?? Str::limit(strip_tags($blog->content), 120) }}
         </p>
-        <ul class="flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-300">
+        <ul class="flex items-center justify-center gap-2 text-sm text-gray-500 ">
           <li>
-            <a href="{{ route('home') }}" class="font-medium text-dark dark:text-white hover:underline">Home</a>
+            <a href="{{ route('home') }}" class="font-medium text-dark  hover:underline">Home</a>
           </li>
           <li>/</li>
           <li>
-            <span class="text-body-color dark:text-dark-6">Blog Details</span>
+            <span class="text-body-color ">Blog Details</span>
           </li>
         </ul>
       </div>
@@ -27,7 +40,7 @@
   <!-- ====== Banner Section End ====== -->
 
   <!-- ====== Blog Details Section Start ====== -->
-  <section class="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+  <section class="pb-10 pt-20  lg:pb-20 lg:pt-[120px]">
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap justify-center -mx-4">
         <div class="w-full px-4">
@@ -75,17 +88,17 @@
             </div>
           </div>
           <!-- نص المقال -->
-          <div class="prose max-w-3xl mx-auto dark:prose-invert prose-lg">
+          <div class="prose max-w-3xl mx-auto  prose-lg">
             {!! $blog->content !!}
           </div>
         </div>
       </div>
       <!-- مقالات ذات صلة -->
       <div class="mt-16">
-        <h2 class="text-2xl font-bold text-dark dark:text-white mb-6">Related Articles</h2>
+        <h2 class="text-2xl font-bold text-dark  mb-6">Related Articles</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           @foreach($relatedBlogs as $related)
-            <div class="bg-white dark:bg-dark-2 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            <div class="bg-white -2 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
               <a href="{{ route('blog.details', $related->id) }}">
                 <img src="{{ asset('storage/' . $related->image) }}" alt="related blog" class="w-full h-48 object-cover">
               </a>
@@ -93,10 +106,10 @@
                 <span class="block mb-2 text-xs text-blue-600 font-semibold">
                   {{ $related->published_at ? $related->published_at->format('M d, Y') : $related->created_at->format('M d, Y') }}
                 </span>
-                <a href="{{ route('blog.details', $related->id) }}" class="block text-lg font-bold text-dark dark:text-white hover:text-blue-600 mb-2">
+                <a href="{{ route('blog.details', $related->id) }}" class="block text-lg font-bold text-dark  hover:text-blue-600 mb-2">
                   {{ $related->title }}
                 </a>
-                <p class="text-sm text-gray-500 dark:text-gray-400">
+                <p class="text-sm text-gray-500 ">
                   {{ $related->excerpt ?? Str::limit(strip_tags($related->content), 80) }}
                 </p>
               </div>
@@ -123,27 +136,27 @@
   <a
     target="_blank"
     rel="nofollow noopener"
-    class="fixed bottom-8 left-4 z-999 inline-flex items-center gap-[10px] rounded-lg bg-white px-[14px] py-2 shadow-2 dark:bg-dark-2 sm:left-9"
+    class="fixed bottom-8 left-4 z-999 inline-flex items-center gap-[10px] rounded-lg bg-white px-[14px] py-2 shadow-2 -2 sm:left-9"
     href="https://tailgrids.com/"
   >
-    <span class="text-base font-medium text-dark-3 dark:text-dark-6">
+    <span class="text-base font-medium text-dark-3 ">
       Made with
     </span>
-    <span class="block w-px h-4 bg-stroke dark:bg-dark-3"></span>
+    <span class="block w-px h-4 bg-stroke -3"></span>
     <span class="block w-full max-w-[88px]">
       <img
         src="./assets/images/brands/tailgrids.svg"
         alt="tailgrids"
-        class="dark:hidden"
+        class=""
       />
       <img
         src="./assets/images/brands/tailgrids-white.svg"
         alt="tailgrids"
-        class="hidden dark:block"
+        class="hidden "
       />
     </span>
   </a>
   <!-- ====== Made With Button End ====== -->
 
   <script src="assets/js/main.js"></script>
-</body>
+</body> --}}

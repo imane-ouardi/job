@@ -1,5 +1,4 @@
 <?php
-
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
@@ -19,7 +18,7 @@ class JobSeeder extends Seeder
             'category_id' => 1,
             'company_id' => 6,
             'deadline' => '1998-03-24',
-            'created_by_email' => Auth::check() ? Auth::user()->email : 'default@example.com', // استخدام البريد الإلكتروني للمستخدم المتصل
+            'created_by_email' => Auth::check() ? Auth::user()->email : 'default@example.com',     
         ]);
         
         

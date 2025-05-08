@@ -1,7 +1,4 @@
-<section
-      id="testimonials"
-      class="overflow-hidden bg-gray-1 py-20 dark:bg-dark-2 md:py-[120px]"
-    >
+<section  id="testimonials"  class="overflow-hidden bg-gray-1 py-20 -2 md:py-[120px]" >
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap justify-center -mx-4">
           <div class="w-full px-4">
@@ -10,11 +7,11 @@
                 Testimonials
               </span>
               <h2
-                class="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]"
+                class="mb-3 text-3xl font-bold leading-[1.2] text-dark  sm:text-4xl md:text-[40px]"
               >
                 What our Clients Say
               </h2>
-              <p class="text-base text-body-color dark:text-dark-6">
+              <p class="text-base text-body-color ">
                 There are many variations of passages of Lorem Ipsum available
                 but the majority have suffered alteration in some form.
               </p>
@@ -22,12 +19,12 @@
           </div>
         </div>
 
-        <div class="-m-5">
+        <div class="-m-5 px-auto">
           <div class="p-5 swiper testimonial-carousel common-carousel">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div
-                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]"
+                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial  sm:px-[30px]"
                 >
                   <div class="mb-[18px] flex items-center gap-[2px]">
                     <img
@@ -52,7 +49,7 @@
                     />
                   </div>
 
-                  <p class="mb-6 text-base text-body-color dark:text-dark-6">
+                  <p class="mb-6 text-base text-body-color ">
                     “Our members are so impressed. It's intuitive. It's clean.
                     It's distraction free. If you're building a community.’’
                   </p>
@@ -68,7 +65,7 @@
 
                     <div>
                       <h3
-                        class="text-sm font-semibold text-dark dark:text-white"
+                        class="text-sm font-semibold text-dark "
                       >
                         Sabo Masties
                       </h3>
@@ -80,7 +77,7 @@
 
               <div class="swiper-slide">
                 <div
-                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]"
+                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial  sm:px-[30px]"
                 >
                   <div class="mb-[18px] flex items-center gap-[2px]">
                     <img
@@ -105,7 +102,7 @@
                     />
                   </div>
 
-                  <p class="mb-6 text-base text-body-color dark:text-dark-6">
+                  <p class="mb-6 text-base text-body-color ">
                     “Our members are so impressed. It's intuitive. It's clean.
                     It's distraction free. If you're building a community.’’
                   </p>
@@ -121,7 +118,7 @@
 
                     <div>
                       <h3
-                        class="text-sm font-semibold text-dark dark:text-white"
+                        class="text-sm font-semibold text-dark "
                       >
                         Musharof Chowdhury
                       </h3>
@@ -135,7 +132,7 @@
 
               <div class="swiper-slide">
                 <div
-                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]"
+                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial  sm:px-[30px]"
                 >
                   <div class="mb-[18px] flex items-center gap-[2px]">
                     <img
@@ -160,7 +157,7 @@
                     />
                   </div>
 
-                  <p class="mb-6 text-base text-body-color dark:text-dark-6">
+                  <p class="mb-6 text-base text-body-color ">
                     “Our members are so impressed. It's intuitive. It's clean.
                     It's distraction free. If you're building a community.’’
                   </p>
@@ -176,7 +173,7 @@
 
                     <div>
                       <h3
-                        class="text-sm font-semibold text-dark dark:text-white"
+                        class="text-sm font-semibold text-dark "
                       >
                         William Smith
                       </h3>
@@ -190,7 +187,7 @@
 
               <div class="swiper-slide">
                 <div
-                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]"
+                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial  sm:px-[30px]"
                 >
                   <div class="mb-[18px] flex items-center gap-[2px]">
                     <img
@@ -215,7 +212,7 @@
                     />
                   </div>
 
-                  <p class="mb-6 text-base text-body-color dark:text-dark-6">
+                  <p class="mb-6 text-base text-body-color ">
                     “Our members are so impressed. It's intuitive. It's clean.
                     It's distraction free. If you're building a community.’’
                   </p>
@@ -231,7 +228,7 @@
 
                     <div>
                       <h3
-                        class="text-sm font-semibold text-dark dark:text-white"
+                        class="text-sm font-semibold text-dark "
                       >
                         Sabo Masties
                       </h3>
@@ -243,7 +240,7 @@
 
               <div class="swiper-slide">
                 <div
-                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]"
+                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial  sm:px-[30px]"
                 >
                   <div class="mb-[18px] flex items-center gap-[2px]">
                     <img
@@ -268,7 +265,7 @@
                     />
                   </div>
 
-                  <p class="mb-6 text-base text-body-color dark:text-dark-6">
+                  <p class="mb-6 text-base text-body-color ">
                     “Our members are so impressed. It's intuitive. It's clean.
                     It's distraction free. If you're building a community.’’
                   </p>
@@ -284,7 +281,7 @@
 
                     <div>
                       <h3
-                        class="text-sm font-semibold text-dark dark:text-white"
+                        class="text-sm font-semibold text-dark "
                       >
                         Musharof Chowdhury
                       </h3>
@@ -298,7 +295,7 @@
 
               <div class="swiper-slide">
                 <div
-                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]"
+                  class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial  sm:px-[30px]"
                 >
                   <div class="mb-[18px] flex items-center gap-[2px]">
                     <img
@@ -323,7 +320,7 @@
                     />
                   </div>
 
-                  <p class="mb-6 text-base text-body-color dark:text-dark-6">
+                  <p class="mb-6 text-base text-body-color ">
                     “Our members are so impressed. It's intuitive. It's clean.
                     It's distraction free. If you're building a community.’’
                   </p>
@@ -339,7 +336,7 @@
 
                     <div>
                       <h3
-                        class="text-sm font-semibold text-dark dark:text-white"
+                        class="text-sm font-semibold text-dark "
                       >
                         William Smith
                       </h3>
@@ -386,4 +383,4 @@
           </div>
         </div>
       </div>
-    </section>
+</section>

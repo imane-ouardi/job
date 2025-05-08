@@ -23,7 +23,7 @@
             <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Visible to All Candidates</li>
             <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Free Updates</li>
           </ul>
-          <a href="#" class="w-full py-3 rounded-lg bg-blue-600 text-white font-semibold text-lg hover:bg-blue-800 transition">Get Started</a>
+          <a href="#" class="w-full py-3 rounded-lg bg-blue-600 text-white font-semibold text-center text-lg hover:bg-blue-800 transition">Get Started</a>
         </div>
       </div>
       <!-- Basic Plan -->
@@ -41,7 +41,7 @@
             <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Company Logo on Listings</li>
             <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Featured in Newsletter</li>
           </ul>
-          <a href="#" class="w-full py-3 rounded-lg bg-blue-600 text-white font-semibold text-lg hover:bg-blue-800 transition">Get Started</a>
+          <a href="#" class="w-full py-3 rounded-lg bg-blue-600 text-white font-semibold text-center  text-lg hover:bg-blue-800 transition">Get Started</a>
         </div>
       </div>
       <!-- Premium Plan -->
@@ -59,7 +59,7 @@
             <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Top Placement on Listings</li>
             <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Dedicated Account Manager</li>
           </ul>
-          <a href="#" class="w-full py-3 rounded-lg bg-blue-600 text-white font-semibold text-lg hover:bg-blue-800 transition">Get Started</a>
+          <a href="#" class="w-full py-3 rounded-lg bg-blue-600 text-white font-semibold text-center text-lg hover:bg-blue-800 transition">Get Started</a>
         </div>
       </div>
     </div>

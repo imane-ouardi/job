@@ -6,7 +6,7 @@
     <title>@yield('title', 'Job Portal')</title>
 
     {{-- CSS --}}
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.svg') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logoo.png') }}" type="image/x-icon">
 
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}"
           type="image/x-icon"
@@ -19,13 +19,9 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 
-
 {{-- 
 
-
-
-
-    
+  
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">

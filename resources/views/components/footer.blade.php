@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4 flex flex-wrap justify-between items-start gap-8">
     <!-- Logo & Description -->
     <div class="flex flex-col items-center md:items-start mb-8 md:mb-0">
-      <img src="/assets/logo-white.svg" alt="Logo" class="mb-4 w-32">
+      <img src="/assets/images/logo/logoo.png" alt="Logo" class="mb-4 w-28">
       <p class="text-slate-200 max-w-xs text-center md:text-left">
         Discover thousands of jobs and start your career journey with us. We connect talents with top companies.
       </p>
@@ -54,10 +54,10 @@
   <div class="border-t border-blue-800 mt-8 pt-6 text-center text-sm text-blue-100">
     &copy; {{ date('Y') }} Jobs Platform. All rights reserved.
   </div>
-  <span class="absolute left-0 top-0 z-[-1] opacity-30">
+  {{-- <span class="absolute left-0 top-0 z-[-1] opacity-30">
     <img src="assets/images/footer/shape-1.svg" alt="" />
-  </span>
-  <span class="absolute bottom-0 right-0 z-[-1] opacity-30">
+  </span> --}}
+  {{-- <span class="absolute bottom-0 right-0 z-[-1] opacity-30">
     <img src="assets/images/footer/shape-3.svg" alt="" />
-  </span>
+  </span> --}}
 </footer>

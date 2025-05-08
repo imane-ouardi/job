@@ -1,5 +1,5 @@
 <x-head/>
-<body class="dark:bg-slate-900">
+<body >
   <div id="root">
     <x-navsec/>
 
@@ -19,7 +19,7 @@
 
     <!-- ====== Shape Divider ====== -->
     <div class="relative">
-      <div class="shape absolute start-0 end-0 sm:-bottom-px -bottom-[2px] overflow-hidden z-1 text-white dark:text-slate-900">
+      <div class="shape absolute start-0 end-0 sm:-bottom-px -bottom-[2px] overflow-hidden z-1 text-white ">
         <svg class="w-full h-auto" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
         </svg>
@@ -27,13 +27,13 @@
     </div>
 
     <!-- ====== Jobs & Filters Section ====== -->
-    <section class="relative md:py-24 py-16 bg-gray-50 dark:bg-dark-2">
+    <section class="relative md:py-24 py-16 bg-gray-50 ">
       <div class="container mx-auto">
         <div class="grid md:grid-cols-12 grid-cols-1 gap-8">
           <!-- Sidebar Filters -->
           <aside class="lg:col-span-4 md:col-span-6">
-            <div class="shadow-lg p-8 rounded-xl bg-white dark:bg-slate-900 sticky top-20 space-y-6">
-              <form method="GET" action="{{ route('jobs') }}">
+            <div class="shadow-lg p-8 rounded-xl bg-white  sticky top-20 space-y-6">
+              <form method="GET" action="{{ route('jobs.index') }}">
                 <div class="space-y-5">
                   <!-- Search Company -->
                   <div>
@@ -44,14 +44,14 @@
                         <path d="m21 21-4.3-4.3"></path>
                       </svg>
                       <input id="searchname"
-                        class="w-full py-2 pl-10 pr-3 text-[14px] border border-gray-200 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none bg-transparent text-blue-900 dark:text-white"
+                        class="w-full py-2 pl-10 pr-3 text-[14px] border border-gray-200 rounded-md focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none bg-transparent text-blue-900 "
                         placeholder="Search" type="text" name="search" value="{{ request('search') }}">
                     </div>
                   </div>
                   <!-- Categories -->
                   <div>
                     <label class="font-semibold">Categories</label>
-                    <select name="category" class="form-select w-full border border-gray-200 rounded-md py-2 px-3 mt-1 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none bg-transparent text-blue-900 dark:text-white">
+                    <select name="category" class="form-select w-full border border-gray-200 rounded-md py-2 px-3 mt-1 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none bg-transparent text-blue-900 ">
                       <option value="">All Categories</option>
                       @foreach($categories as $category)
                         <option value="{{ $category->id }}" @selected(request('category') == $category->id)>{{ $category->name }}</option>
@@ -61,7 +61,7 @@
                   <!-- Locations -->
                   <div>
                     <label class="font-semibold">Location</label>
-                    <select name="location" class="form-select w-full border border-gray-200 rounded-md py-2 px-3 mt-1 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none bg-transparent text-blue-900 dark:text-white">
+                    <select name="location" class="form-select w-full border border-gray-200 rounded-md py-2 px-3 mt-1 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none bg-transparent text-blue-900 ">
                       <option value="">All Locations</option>
                       @foreach($locations as $location)
                         <option value="{{ $location }}" @selected(request('location') == $location)>{{ $location }}</option>
@@ -81,9 +81,8 @@
                               name="types[]"
                               value="{{ $type }}"
                               {{ is_array(request('types')) && in_array($type, request('types')) ? 'checked' : '' }}>
-                            <span class="ml-2 text-slate-600 dark:text-slate-300">{{ $type }}</span>
+                            <span class="ml-2 text-slate-600 ">{{ $type }}</span>
                           </label>
-                          <!-- عداد لكل نوع وظيفة (اختياري) -->
                           <span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded-full">
                             {{ \App\Models\Job::where('type', $type)->count() }}
                           </span>
@@ -97,15 +96,15 @@
                     <div class="block mt-2 space-y-2">
                       <label class="inline-flex items-center">
                         <input class="form-radio text-blue-600 focus:ring-blue-500" type="radio" value="1" name="salary" {{ request('salary') == '1' ? 'checked' : '' }}>
-                        <span class="ml-2 text-slate-600 dark:text-slate-300">10k - 15k</span>
+                        <span class="ml-2 text-slate-600 ">10k - 15k</span>
                       </label>
                       <label class="inline-flex items-center">
                         <input class="form-radio text-blue-600 focus:ring-blue-500" type="radio" value="2" name="salary" {{ request('salary') == '2' ? 'checked' : '' }}>
-                        <span class="ml-2 text-slate-600 dark:text-slate-300">15k - 25k</span>
+                        <span class="ml-2 text-slate-600 ">15k - 25k</span>
                       </label>
                       <label class="inline-flex items-center">
                         <input class="form-radio text-blue-600 focus:ring-blue-500" type="radio" value="3" name="salary" {{ request('salary') == '3' ? 'checked' : '' }}>
-                        <span class="ml-2 text-slate-600 dark:text-slate-300">more than 25K</span>
+                        <span class="ml-2 text-slate-600 ">more than 25K</span>
                       </label>
                     </div>
                   </div>
@@ -113,7 +112,7 @@
                     <input class="py-2 px-5 w-full bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition" type="submit" value="Apply Filter">
                   </div>
                   <div>
-                    <a href="{{ route('jobs') }}" class="block py-2 px-5 w-full text-center bg-gray-200 text-blue-900 font-semibold rounded-lg hover:bg-gray-300 transition mt-2">
+                    <a href="{{ route('jobs.index') }}" class="block py-2 px-5 w-full text-center bg-gray-200 text-blue-900 font-semibold rounded-lg hover:bg-gray-300 transition mt-2">
                       Reset Filter
                     </a>
                   </div>
@@ -126,7 +125,7 @@
           <main class="lg:col-span-8 md:col-span-6">
             <div class="grid lg:grid-cols-2 gap-8">
               @forelse($jobs as $job)
-                <div class="group shadow-lg hover:shadow-2xl transition rounded-xl bg-white dark:bg-slate-900 p-6 mb-6">
+                <div class="group shadow-lg hover:shadow-2xl transition rounded-xl bg-white  p-6 mb-6">
                   <div class="flex items-center justify-between">
                     <div class="flex items-center">
                       <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-lg mr-3">
@@ -180,10 +179,10 @@
     </section>
 
     <!-- ====== Features Section (Why you'll love it) ====== -->
-    <section class="bg-white dark:bg-dark-2 py-20">
+    <section class="bg-white  py-20">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 pb-8 text-center">
-          <h3 class="mb-4 text-2xl md:text-3xl font-bold text-blue-900 dark:text-white">Why you'll love it</h3>
+          <h3 class="mb-4 text-2xl md:text-3xl font-bold text-blue-900 ">Why you'll love it</h3>
           <p class="text-slate-500 max-w-xl mx-auto">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30,000+ companies worldwide.</p>
         </div>
         <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-8">

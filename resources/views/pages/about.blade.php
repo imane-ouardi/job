@@ -6,24 +6,37 @@
     <!-- ====== Navbar Section Start -->
     <x-navsec/>
     <!-- ====== Navbar Section End -->
+     <!-- ====== Hero Section Start ====== -->
+     <section class="relative w-full min-h-[60vh] flex flex-col justify-center bg-gradient-to-br from-blue-700 via-blue-900 to-blue-700 bg-cover">
+      <div class="absolute inset-0 bg-blue-900/80"></div>
+      <div class="container relative z-10 mx-auto px-4 py-24 flex flex-col items-center text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
+          Job Vacancies
+        </h1>
+        <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-8 drop-shadow">
+          Find your next opportunity among thousands of jobs from top companies.
+        </p>
+      </div>
+    </section>
+    <!-- ====== Hero Section End ====== -->
 
     <!-- ====== Banner Section Start -->
     <div
-      class="relative z-10 overflow-hidden pb-[60px] pt-[120px] dark:bg-dark md:pt-[130px] lg:pt-[160px]"
+      class="relative z-10 overflow-hidden pb-[60px] pt-[120px]  md:pt-[130px] lg:pt-[160px]"
     >
       <div
-        class="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3"
+        class="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-stroke/0 via-stroke to-stroke/0 "
       ></div>
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center -mx-4">
           <div class="w-full px-4">
             <div class="text-center">
               <h1
-                class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
+                class="mb-4 text-3xl font-bold text-dark  sm:text-4xl md:text-[40px] md:leading-[1.2]"
               >
                 About Us Page
               </h1>
-              <p class="mb-5 text-base text-body-color dark:text-dark-6">
+              <p class="mb-5 text-base text-body-color ">
                 There are many variations of passages of Lorem Ipsum available.
               </p>
 
@@ -31,7 +44,7 @@
                 <li>
                   <a
                     href="{{ route('home') }}"
-                    class="flex items-center gap-[10px] text-base font-medium text-dark dark:text-white"
+                    class="flex items-center gap-[10px] text-base font-medium text-dark "
                   >
                     Home
                   </a>
@@ -39,9 +52,9 @@
                 <li>
                   <a
                     href="javascript:void(0)"
-                    class="flex items-center gap-[10px] text-base font-medium text-body-color dark:text-dark-6"
+                    class="flex items-center gap-[10px] text-base font-medium text-body-color "
                   >
-                    <span class="text-body-color dark:text-dark-6"> / </span>
+                    <span class="text-body-color "> / </span>
                     About us
                   </a>
                 </li>
@@ -162,7 +175,7 @@
     <!-- ====== Team Section Start -->
     <section
       id="team"
-      class="overflow-hidden bg-gray-1 pb-12 pt-20 dark:bg-dark-2 lg:pb-[90px] lg:pt-[120px]"
+      class="overflow-hidden bg-gray-1 pb-12 pt-20  lg:pb-[90px] lg:pt-[120px]"
     >
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
@@ -172,11 +185,11 @@
                 Our Team Members
               </span>
               <h2
-                class="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]"
+                class="mb-3 text-3xl font-bold leading-[1.2] text-dark  sm:text-4xl md:text-[40px]"
               >
                 Our Creative Team
               </h2>
-              <p class="text-base text-body-color dark:text-dark-6">
+              <p class="text-base text-body-color ">
                 There are many variations of passages of Lorem Ipsum available
                 but the majority have suffered alteration in some form.
               </p>
@@ -186,7 +199,7 @@
         <div class="flex flex-wrap justify-center -mx-4">
           <div class="w-full px-4 sm:w-1/2 lg:w-1/4 xl:w-1/4">
             <div
-              class="px-5 pt-12 pb-10 mb-8 bg-white group rounded-xl shadow-testimonial dark:bg-dark dark:shadow-none"
+              class="px-5 pt-12 pb-10 mb-8 bg-white group rounded-xl shadow-testimonial  "
             >
               <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
                 <img
@@ -422,11 +435,11 @@
               </div>
               <div class="text-center">
                 <h4
-                  class="mb-1 text-lg font-semibold text-dark dark:text-white"
+                  class="mb-1 text-lg font-semibold text-dark "
                 >
                   Melissa Tatcher
                 </h4>
-                <p class="mb-5 text-sm text-body-color dark:text-dark-6">
+                <p class="mb-5 text-sm text-body-color ">
                   Marketing Expert
                 </p>
                 <div class="flex items-center justify-center gap-5">
@@ -498,7 +511,7 @@
           </div>
           <div class="w-full px-4 sm:w-1/2 lg:w-1/4 xl:w-1/4">
             <div
-              class="px-5 pt-12 pb-10 mb-8 bg-white group rounded-xl shadow-testimonial dark:bg-dark dark:shadow-none"
+              class="px-5 pt-12 pb-10 mb-8 bg-white group rounded-xl shadow-testimonial  "
             >
               <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
                 <img
@@ -626,11 +639,11 @@
               </div>
               <div class="text-center">
                 <h4
-                  class="mb-1 text-lg font-semibold text-dark dark:text-white"
+                  class="mb-1 text-lg font-semibold text-dark "
                 >
                   Stuard Ferrel
                 </h4>
-                <p class="mb-5 text-sm text-body-color dark:text-dark-6">
+                <p class="mb-5 text-sm text-body-color ">
                   Digital Marketer
                 </p>
                 <div class="flex items-center justify-center gap-5">
@@ -702,7 +715,7 @@
           </div>
           <div class="w-full px-4 sm:w-1/2 lg:w-1/4 xl:w-1/4">
             <div
-              class="px-5 pt-12 pb-10 mb-8 bg-white group rounded-xl shadow-testimonial dark:bg-dark dark:shadow-none"
+              class="px-5 pt-12 pb-10 mb-8 bg-white group rounded-xl shadow-testimonial  "
             >
               <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
                 <img
@@ -830,11 +843,11 @@
               </div>
               <div class="text-center">
                 <h4
-                  class="mb-1 text-lg font-semibold text-dark dark:text-white"
+                  class="mb-1 text-lg font-semibold text-dark "
                 >
                   Eva Hudson
                 </h4>
-                <p class="mb-5 text-sm text-body-color dark:text-dark-6">
+                <p class="mb-5 text-sm text-body-color ">
                   Creative Designer
                 </p>
                 <div class="flex items-center justify-center gap-5">
@@ -906,7 +919,7 @@
           </div>
           <div class="w-full px-4 sm:w-1/2 lg:w-1/4 xl:w-1/4">
             <div
-              class="px-5 pt-12 pb-10 mb-8 bg-white group rounded-xl shadow-testimonial dark:bg-dark dark:shadow-none"
+              class="px-5 pt-12 pb-10 mb-8 bg-white group rounded-xl shadow-testimonial  "
             >
               <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
                 <img
@@ -1034,11 +1047,11 @@
               </div>
               <div class="text-center">
                 <h4
-                  class="mb-1 text-lg font-semibold text-dark dark:text-white"
+                  class="mb-1 text-lg font-semibold text-dark "
                 >
                   Jackie Sanders
                 </h4>
-                <p class="mb-5 text-sm text-body-color dark:text-dark-6">
+                <p class="mb-5 text-sm text-body-color ">
                   SEO Expert
                 </p>
                 <div class="flex items-center justify-center gap-5">

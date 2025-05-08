@@ -16,5 +16,6 @@
     <script>
       new WOW().init();
     </script>
+    @livewireStyles
   </head>
   

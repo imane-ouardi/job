@@ -10,7 +10,7 @@ use Filament\Panel;
 
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable 
+class User extends Authenticatable implements FilamentUser
 {
     use HasFactory, Notifiable;
 

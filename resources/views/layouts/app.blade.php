@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@yield('title', 'Job Portal')</title>
 
     {{-- CSS --}}
-    <link rel="shortcut icon" href="{{ asset('assets/images/logoo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logoo.svg') }}" type="image/x-icon">
 
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}"
-          type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
@@ -19,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 
-{{-- 
+    {{-- 
 
   
         <link href="css/bootstrap.css" rel="stylesheet">
@@ -40,6 +39,7 @@
     {{-- Livewire Styles --}}
     @livewireStyles
 </head>
+
 <body class=" bg-white text-body dark:bg-dark dark:text-white ">
 
     {{-- محتوى الصفحة --}}
@@ -124,4 +124,5 @@
         });
     </script>
 </body>
+
 </html>

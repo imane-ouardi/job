@@ -13,15 +13,15 @@
 </section>
 <!-- ====== Hero Section End ====== -->
 
-<section class="bg-slate-50 dark:bg-slate-800 md:py-24 py-16">
+<section class="bg-slate-50  md:py-24 py-16">
     <div class="container mt-10">
         <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
             <!-- Sidebar: Company Info -->
             <div class="lg:col-span-4 md:col-span-6">
-                <div class="p-8 shadow-lg rounded-xl bg-white dark:bg-slate-900 sticky top-20 flex flex-col items-center">
+                <div class="p-8 shadow-lg rounded-xl bg-white  sticky top-20 flex flex-col items-center">
                     <img class="rounded-full size-32 p-2 bg-white shadow-md border-4 border-blue-100" alt="logo"
                          src="{{ $company->logo ? asset('storage/' . $company->logo) : '/assets/default-logo.png' }}">
-                    <h3 class="text-2xl font-bold mt-4 text-blue-900 dark:text-white">{{ $company->name }}</h3>
+                    <h3 class="text-2xl font-bold mt-4 text-blue-900 ">{{ $company->name }}</h3>
                     <span class="text-slate-500 mt-2">{{ $company->location ?? 'Not specified' }}</span>
                     <div class="mt-4 text-center">
                         <p class="text-slate-400">{{ $company->description }}</p>
@@ -30,7 +30,7 @@
                         @endif
                     </div>
                     <div class="mt-6 w-full">
-                        <ul class="text-sm text-slate-600 dark:text-slate-300 space-y-2">
+                        <ul class="text-sm text-slate-600  space-y-2">
                             <li><strong>Founder:</strong> {{ $company->founder ?? 'Not available' }}</li>
                             <li><strong>Founded:</strong> {{ $company->founded ?? 'Not available' }}</li>
                             <li><strong>Employees:</strong> {{ $company->employees ?? 'Not available' }}</li>
@@ -41,8 +41,8 @@
             </div>
             <!-- Main Content: Job Info -->
             <div class="lg:col-span-8 md:col-span-6">
-                <div class="bg-white dark:bg-slate-900 rounded-xl shadow-lg p-8">
-                    <h2 class="text-3xl font-bold text-blue-900 dark:text-white mb-4">{{ $job->title }}</h2>
+                <div class="bg-white  rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-blue-900  mb-4">{{ $job->title }}</h2>
                     <div class="flex flex-wrap gap-4 mb-6">
                         <span class="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-semibold">
                             <svg class="w-5 h-5 me-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -62,11 +62,11 @@
                         </span>
                     </div>
                     <h4 class="text-xl font-semibold mb-2">Job Description:</h4>
-                    <p class="text-slate-600 dark:text-slate-300 mb-6">{{ $job->description }}</p>
+                    <p class="text-slate-600  mb-6">{{ $job->description }}</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <h5 class="font-bold mb-2">Required Qualifications:</h5>
-                            <ul class="list-disc list-inside text-slate-600 dark:text-slate-300">
+                            <ul class="list-disc list-inside text-slate-600 ">
                                 <li>Relevant degree</li>
                                 <li>Previous experience in the field</li>
                                 <li>Excellent communication skills</li>
@@ -75,7 +75,7 @@
                         </div>
                         <div>
                             <h5 class="font-bold mb-2">Benefits:</h5>
-                            <ul class="list-disc list-inside text-slate-600 dark:text-slate-300">
+                            <ul class="list-disc list-inside text-slate-600 ">
                                 <li>Motivating work environment</li>
                                 <li>Competitive salaries</li>
                                 <li>Health insurance</li>

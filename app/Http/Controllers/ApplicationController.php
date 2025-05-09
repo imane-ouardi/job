@@ -11,17 +11,12 @@ class ApplicationController extends Controller
     public function store(Request $request)
     {
         $application = new Application();
-        $application->user_id = Auth::id(); // حفظ رقم المستخدم الحالي
-        $application->job_id = $request->job_id; // حفظ رقم الوظيفة
-    
-        // إذا كان لديك حقول أخرى في النموذج مثل الاسم والبريد والسيرة الذاتية والرسالة
-        // يمكنك حفظها بهذا الشكل:
-        $application->cover_letter = $request->message; // إذا كان اسم الحقل في النموذج message
-        $application->cv = $request->cv; // رابط السيرة الذاتية
-    
+        $application->user_id = Auth::id(); // Use Auth facade to get user id
+        // Fill other required fields from $request
+        // Example: $application->job_id = $request->job_id;
         $application->save();
-    
-        // إعادة التوجيه مع رسالة نجاح
+
+        // Redirect or return success message
         return redirect()->back()->with('success', 'Application submitted successfully');
     }
 

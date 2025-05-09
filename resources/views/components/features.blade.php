@@ -18,7 +18,7 @@
                 </svg>
             </div>
             <div class="content mt-6 text-center">
-                <span class="title text-lg font-semibold hover:text-blue-800">Business <br> Development</span>
+                <span class="title text-lg font-semibold text-dark hover:text-blue-800">Business <br> Development</span>
                 <p class="text-blue-800 mt-3">74 Jobs</p>
             </div>
         </a>
@@ -30,7 +30,7 @@
                 </svg>
             </div>
             <div class="content mt-6 text-center">
-                <span class="title text-lg font-semibold hover:text-blue-800">Marketing &amp; <br> Communication</span>
+                <span class="title text-lg font-semibold text-dark hover:text-blue-800">Marketing &amp; <br> Communication</span>
                 <p class="text-blue-800 mt-3">20 Jobs</p>
             </div>
         </a>
@@ -42,7 +42,7 @@
                 </svg>
             </div>
             <div class="content mt-6 text-center">
-                <span class="title text-lg font-semibold hover:text-blue-800">Project <br> Management</span>
+                <span class="title text-lg font-semibold text-dark hover:text-blue-800">Project <br> Management</span>
                 <p class="text-blue-800 mt-3">35 Jobs</p>
             </div>
         </a>
@@ -55,7 +55,7 @@
                 </svg>
             </div>
             <div class="content mt-6 text-center">
-                <span class="title text-lg font-semibold hover:text-blue-800">Customer <br> Service</span>
+                <span class="title text-lg font-semibold text-dark hover:text-blue-800">Customer <br> Service</span>
                 <p class="text-blue-800 mt-3">46 Jobs</p>
             </div>
         </a>
@@ -67,7 +67,7 @@
                 </svg>
             </div>
             <div class="content mt-6 text-center">
-                <span class="title text-lg font-semibold hover:text-blue-800">Software <br> Engineering</span>
+                <span class="title text-lg font-semibold text-dark hover:text-blue-800">Software <br> Engineering</span>
                 <p class="text-blue-800 mt-3">60 Jobs</p>
             </div>
         </a>

@@ -8,7 +8,20 @@ class Application extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'job_id', 'cover_letter', 'cv', 'status'];
+    protected $fillable = [
+        'user_id',
+        'job_id',
+        'full_name',
+        'email',
+        'phone',
+        'education',
+        'experience',
+        'skills',
+        'cv',
+        'extra_file',
+        'cover_letter',
+        'status'
+    ];
 
     public function job()
     {

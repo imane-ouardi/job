@@ -15,6 +15,7 @@ class UserFactory extends Factory
             'password' => bcrypt('password'),
             'remember_token' => Str::random(10),
             'role' => $this->faker->randomElement(['admin', 'employer', 'employee']),
+            'profile_photo' => 'profile_photos/default.png',
         ];
     }
 }

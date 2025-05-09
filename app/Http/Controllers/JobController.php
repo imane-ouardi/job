@@ -51,10 +51,7 @@ class JobController extends Controller
 
     public function show(Job $job)
     {
-        $company = $job->company;
-        $jobs = $company ? $company->jobs : collect();
-        $relatedCompanies = \App\Models\Company::where('id', '!=', $company->id ?? 0)->take(4)->get();
-
-        return view('pages.job-details', compact('job', 'company', 'jobs', 'relatedCompanies'));
+      
+        return view('pages.job-details', compact('job'));
     }
 }

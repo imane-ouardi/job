@@ -62,7 +62,7 @@
         </div>
     </div>
     <!-- Bottom Bar -->
-    <div class="border-t border-blue-800 mt-8 pt-6 text-center text-sm text-blue-100">
+    <div class="border-t border-blue-800 mt-8 pt-6 text-center text-sm text-blue-100 pb-6">
         &copy; {{ date('Y') }} Jobs Platform. All rights reserved.
     </div>
     {{-- <span class="absolute left-0 top-0 z-[-1] opacity-30">

@@ -9,10 +9,12 @@ class CompanyFactory extends Factory
     {
         return [
             'name' => $this->faker->company,
-            'logo' => 'logos/' . $this->faker->word . '.png',
+            'logo' => 'https://loremflickr.com/120/120/company,logo?random=' . $this->faker->unique()->numberBetween(1, 9999),
             'location' => $this->faker->city,
             'website' => $this->faker->url,
             'description' => $this->faker->paragraph,
         ];
     }
 }
+
+// ... existing code ...

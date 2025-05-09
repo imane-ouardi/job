@@ -34,4 +34,3 @@ Route::get('/employer-detail/{company}', [CompanyController::class, 'show'])->na
 // });
 
 Route::get('/applications/create/{job}', [ApplicationController::class, 'create'])->name('applications.create');
-Route::post('/applications', [ApplicationController::class, 'store'])->name('applications.store');

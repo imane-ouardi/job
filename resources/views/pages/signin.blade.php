@@ -44,16 +44,16 @@
 
 
     <!-- ====== Forms Section Start -->
-    <section class="bg-[#F4F7FF] py-14 lg:py-20 dark:bg-dark">
+    <section class="bg-[#F4F7FF] py-14 lg:py-20 ">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap -mx-4">
                 <div class="w-full px-4">
                     <div
-                        class="relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white dark:bg-dark-2 py-14 px-8 text-center sm:px-12 md:px-[60px]">
+                        class="relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white -2 py-14 px-8 text-center sm:px-12 md:px-[60px]">
                         <div class="mb-10 text-center">
                             <a href="javascript:void(0)" class="mx-auto inline-block max-w-[160px]">
-                                <img src="assets/images/logo/logoo.svg" alt="logo" class="dark:hidden" />
-                                <img src="assets/images/logo/logoo.svg" alt="logo" class="hidden dark:block" />
+                                <img src="assets/images/logo/logoo.svg" alt="logo" class="" />
+                                <img src="assets/images/logo/logoo.svg" alt="logo" class="hidden " />
                             </a>
                         </div>
 
@@ -98,23 +98,23 @@
     {{-- <a
       target="_blank"
       rel="nofollow noopener"
-      class="inline-flex items-center gap-[10px] py-2 px-[14px] rounded-lg bg-white dark:bg-dark-2 shadow-2 fixed bottom-8 left-4 sm:left-9 z-999"
+      class="inline-flex items-center gap-[10px] py-2 px-[14px] rounded-lg bg-white -2 shadow-2 fixed bottom-8 left-4 sm:left-9 z-999"
       href="https://tailgrids.com/"
     >
       <span class="text-base font-medium text-dark-3 ">
         Made with
       </span>
-      <span class="block w-px h-4 bg-stroke dark:bg-dark-3"></span>
+      <span class="block w-px h-4 bg-stroke -3"></span>
       <span class="block max-w-[88px] w-full">
         <img
           src="./assets/images/brands/tailgrids.svg"
           alt="tailgrids"
-          class="dark:hidden"
+          class=""
         />
         <img
           src="./assets/images/brands/tailgrids-white.svg"
           alt="tailgrids"
-          class="hidden dark:block"
+          class="hidden"
         />
       </span>
     </a> --}}

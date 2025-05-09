@@ -9,7 +9,7 @@
     {{-- CSS --}}
     <link rel="shortcut icon" href="{{ asset('assets/images/logoo.svg') }}" type="image/x-icon">
 
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('images/logoo.svg') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
@@ -25,8 +25,8 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
       
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-        <link rel="icon" href="images/favicon.png" type="image/x-icon"> --}}
+        <link rel="shortcut icon" href="images/logoo.png" type="image/x-icon">
+        <link rel="icon" href="images/logoo.png" type="image/x-icon"> --}}
 
     <!-- ==== WOW JS ==== -->
     <script src="{{ asset('js/wow.min.js') }}"></script>
@@ -40,7 +40,7 @@
     @livewireStyles
 </head>
 
-<body class=" bg-white text-body dark:bg-dark dark:text-white ">
+<body class=" bg-white text-body  ">
 
     {{-- محتوى الصفحة --}}
     @yield('content')

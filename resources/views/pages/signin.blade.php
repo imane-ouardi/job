@@ -94,32 +94,7 @@
     </a>
     <!-- ====== Back To Top End -->
 
-    <!-- ====== Made With Button Start -->
-    {{-- <a
-      target="_blank"
-      rel="nofollow noopener"
-      class="inline-flex items-center gap-[10px] py-2 px-[14px] rounded-lg bg-white -2 shadow-2 fixed bottom-8 left-4 sm:left-9 z-999"
-      href="https://tailgrids.com/"
-    >
-      <span class="text-base font-medium text-dark-3 ">
-        Made with
-      </span>
-      <span class="block w-px h-4 bg-stroke -3"></span>
-      <span class="block max-w-[88px] w-full">
-        <img
-          src="./assets/images/brands/tailgrids.svg"
-          alt="tailgrids"
-          class=""
-        />
-        <img
-          src="./assets/images/brands/tailgrids-white.svg"
-          alt="tailgrids"
-          class="hidden"
-        />
-      </span>
-    </a> --}}
-    <!-- ====== Made With Button End -->
-
+   
     <!-- ====== All Scripts -->
     <script src="assets/js/main.js"></script>
 </body>

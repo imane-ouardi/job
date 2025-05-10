@@ -36,12 +36,7 @@
                                 </a>
                             </li>
                             <li class="relative group">
-                                {{-- <a
-                href="#pricing"
-                class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary d lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
-              >
-                Pricing
-              </a> --}}
+                        
                             </li>
                             <li class="relative group">
                                 <a href="#contact"
@@ -52,12 +47,7 @@
                                 </a>
                             </li>
                             <li class="relative group">
-                                {{-- <a
-                href="#blog"
-                class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary d lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
-              >
-                Blog
-              </a> --}}
+                       
                             </li>
                         </ul>
                     </nav>

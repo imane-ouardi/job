@@ -42,9 +42,24 @@ class JobResource extends Resource
                 ->placeholder('Winter Park, Florida')
                 ->required()
                 ->maxLength(255),
-            TextInput::make('salary')    
-            ->placeholder('$90,000 USD')
-            ->maxLength(255),
+                Forms\Components\TextInput::make('salary')
+                ->label('Salary')
+                ->numeric()
+                ->min(1000)
+                ->max(50000)
+                ->required()
+                ->helperText('Salary must be between 1000 and 50000'),
+            
+            Forms\Components\Select::make('currency')
+                ->label('Currency')
+                ->options([
+                    'MAD' => 'MAD',
+                    'USD' => 'USD',
+                    'EUR' => 'EUR',
+                ])
+                ->default('MAD')
+                ->required(),
+            
             Select::make('type')
                 ->options([
                     'full-time' => 'Full Time',
@@ -66,7 +81,10 @@ class JobResource extends Resource
                 ->searchable()
                 ->required(),
 
-            DatePicker::make('deadline')->label('Application Deadline'),
+            DatePicker::make('deadline')
+                ->label('Application Deadline')
+                ->required()
+                ->after('today'),
         ]);
     }
 
@@ -78,7 +96,9 @@ class JobResource extends Resource
             TextColumn::make('category.name')->label('Category')->sortable(),
             TextColumn::make('company.name')->label('Company')->sortable(),
             TextColumn::make('location')->sortable(),
-            TextColumn::make('salary'),
+            Tables\Columns\TextColumn::make('salary')
+                ->label('Salary')
+                ->formatStateUsing(fn ($state, $record) => number_format($state, 2) . ' ' . $record->currency),
             TextColumn::make('created_at')->dateTime()->sortable(),
         ]);
     }

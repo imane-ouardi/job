@@ -23,7 +23,7 @@ class JobResource extends Resource
     {
         return $form
             ->schema([
-                //
+                
             ]);
     }
 
@@ -35,8 +35,10 @@ class JobResource extends Resource
             Tables\Columns\TextColumn::make('company.name')->label('Company'),
             Tables\Columns\TextColumn::make('type')->label('Type'),
             Tables\Columns\TextColumn::make('location')->label('Location'),
-            Tables\Columns\TextColumn::make('salary')->label('Salary'),
-            Tables\Columns\TextColumn::make('deadline')->date()->label('Deadline'),
+            Tables\Columns\TextColumn::make('salary')
+            ->label('Salary')
+            ->formatStateUsing(fn ($state, $record) => number_format($state, 2) . ' ' . $record->currency),
+                    Tables\Columns\TextColumn::make('deadline')->date()->label('Deadline'),
         ])
         ->actions([
             Tables\Actions\ViewAction::make(),
@@ -52,8 +54,26 @@ class JobResource extends Resource
                     'Part-time' => 'Part-time',
                     'Contract' => 'Contract',
                     'Internship' => 'Internship',
+                    'remote' => 'Remote',
                 ]),
-            Tables\Filters\SelectFilter::make('location'),
+            Tables\Filters\SelectFilter::make('location')
+                ->label('Location')
+                ->options(
+                    fn () => \App\Models\Job::query()->pluck('location', 'location')->unique()->toArray()
+                ),
+            Tables\Filters\SelectFilter::make('company_id')
+                ->label('Company')
+                ->relationship('company', 'name'),
+            Tables\Filters\SelectFilter::make('salary')
+                ->label('Salary')
+                ->options(
+                    fn () => \App\Models\Job::query()->pluck('salary', 'salary')->unique()->toArray()
+                ),
+            Tables\Filters\SelectFilter::make('deadline')
+                ->label('Deadline')
+                ->options(
+                    fn () => \App\Models\Job::query()->pluck('deadline', 'deadline')->unique()->toArray()
+                ),
         ])
         ->bulkActions([
             Tables\Actions\BulkActionGroup::make([

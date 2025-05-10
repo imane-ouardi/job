@@ -16,7 +16,6 @@
       <section id="contact" class="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100">
         <div class="container mx-auto px-4">
           <div class="flex flex-col lg:flex-row items-center gap-16">
-            <!-- نموذج التواصل -->
             <div class="w-full lg:w-1/2 bg-white rounded-2xl shadow-2xl p-10 md:p-14 flex flex-col justify-center">
               <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-4 text-center">
                 Get in Touch
@@ -29,7 +28,6 @@
 
 
             </div>
-            <!-- معلومات التواصل -->
             <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
               <div class="mb-10">
                 <h3 class="text-2xl font-bold text-blue-900 mb-4">Contact Information</h3>

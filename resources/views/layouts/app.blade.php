@@ -18,16 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 
-    {{-- 
-
   
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/responsive.css" rel="stylesheet">
-      
-        <link rel="shortcut icon" href="images/logoo.png" type="image/x-icon">
-        <link rel="icon" href="images/logoo.png" type="image/x-icon"> --}}
-
     <!-- ==== WOW JS ==== -->
     <script src="{{ asset('js/wow.min.js') }}"></script>
     <script>
@@ -42,7 +33,6 @@
 
 <body class=" bg-white text-body  ">
 
-    {{-- محتوى الصفحة --}}
     @yield('content')
 
     {{-- JavaScript --}}

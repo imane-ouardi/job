@@ -8,7 +8,7 @@
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
             Job Details
         </h1>
-        <span class="text-lg text-blue-100">{{ $company->name }}</span>
+        <span class="text-lg text-blue-100">{{$job->company?->name }}</span>
     </div>
 </section>
 <!-- ====== Hero Section End ====== -->
@@ -20,21 +20,22 @@
             <div class="lg:col-span-4 md:col-span-6">
                 <div class="p-8 shadow-lg rounded-xl bg-white  sticky top-20 flex flex-col items-center">
                     <img class="rounded-full size-32 p-2 bg-white shadow-md border-4 border-blue-100" alt="logo"
-                         src="{{ $company->logo ? asset('storage/' . $company->logo) : '/assets/default-logo.png' }}">
-                    <h3 class="text-2xl font-bold mt-4 text-blue-900 ">{{ $company->name }}</h3>
-                    <span class="text-slate-500 mt-2">{{ $company->location ?? 'Not specified' }}</span>
+                         src="{{$job->company?->logo ? asset('storage/' .$job->company?->logo) : '/assets/default-logo.png' }}">
+                    <h3 class="text-2xl font-bold mt-4 text-blue-900 ">{{$job->company?->name }}</h3>
+                    <span class="text-slate-500 mt-2">{{$job->company?->location ?? 'Not specified' }}</span>
                     <div class="mt-4 text-center">
-                        <p class="text-slate-400">{{ $company->description }}</p>
-                        @if($company->website)
-                            <a href="{{ $company->website }}" target="_blank" class="block mt-2 text-blue-600 hover:underline">Website</a>
+
+                        <p class="text-slate-400">{{$job->company?->description }}</p>
+                        @if($job->company?->website)
+                            <a href="{{$job->company?->website }}" target="_blank" class="block mt-2 text-blue-600 hover:underline">Website</a>
                         @endif
                     </div>
                     <div class="mt-6 w-full">
                         <ul class="text-sm text-slate-600  space-y-2">
-                            <li><strong>Founder:</strong> {{ $company->founder ?? 'Not available' }}</li>
-                            <li><strong>Founded:</strong> {{ $company->founded ?? 'Not available' }}</li>
-                            <li><strong>Employees:</strong> {{ $company->employees ?? 'Not available' }}</li>
-                            <li><strong>Email:</strong> <a href="mailto:{{ $company->email }}" class="text-blue-600 hover:underline">{{ $company->email ?? 'Not available' }}</a></li>
+                            <li><strong>Founder:</strong> {{$job->company?->founder ?? 'Not available' }}</li>
+                            <li><strong>Founded:</strong> {{$job->company?->founded ?? 'Not available' }}</li>
+                            <li><strong>Employees:</strong> {{$job->company?->employees ?? 'Not available' }}</li>
+                            <li><strong>Email:</strong> <a href="mailto:{{$job->company?->email }}" class="text-blue-600 hover:underline">{{$job->company?->email ?? 'Not available' }}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,7 +59,7 @@
                         </span>
                         <span class="inline-flex items-center px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full font-semibold">
                             <svg class="w-5 h-5 me-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                            {{ $job->salary ? '$' . $job->salary : 'Not specified' }}
+                            {{ $job->salary ? $job->salary . ' ' . $job->currency : 'Not specified' }}
                         </span>
                     </div>
                     <h4 class="text-xl font-semibold mb-2">Job Description:</h4>
@@ -83,9 +84,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="mt-8">
-                        <a href="{{ route('applications.create', $job->id) }}" class="inline-block px-8 py-3 bg-blue-700 text-white font-bold rounded-lg shadow hover:bg-blue-800 transition">
-                            Apply Now
+                    <div class="mt-8">  
+                        <a href="{{ auth()->check() ? route('applications.create', $job->id) :url("/employee/login") }}" class="inline-block px-8 py-3 bg-blue-700 text-white font-bold rounded-lg shadow hover:bg-blue-800 transition">                            Apply Now
                         </a>
                     </div>
                 </div>

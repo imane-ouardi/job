@@ -21,7 +21,7 @@ class ContactForm extends Component
         $this->validate();
 
         Mail::raw("Message from contact form:\n\nName: {$this->name}\nEmail: {$this->email}\nMessage:\n{$this->message}", function ($mail) {
-            $mail->to('your-gmail@gmail.com') // ← هنا ضع بريدك الحقيقي
+            $mail->to('your-gmail@gmail.com') 
                  ->subject('New Contact Message');
         });
 

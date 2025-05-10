@@ -31,7 +31,7 @@ class User extends Authenticatable implements FilamentUser
         'email_verified_at' => 'datetime',
     ];
 
-    // Role helpers
+    
     public function isAdmin() { return $this->role === 'admin'; }
     public function isEmployer() { return $this->role === 'employer'; }
     public function isEmployee() { return $this->role === 'employee'; }
@@ -41,7 +41,7 @@ class User extends Authenticatable implements FilamentUser
         $panelId = $panel->getId();
 
         if ($this->role === 'admin') {
-            return true; // Admin can access all panels
+            return true; 
         }
 
         return match ($panelId) {

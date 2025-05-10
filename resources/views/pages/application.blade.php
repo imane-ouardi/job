@@ -1,3 +1,4 @@
+<script src="//unpkg.com/alpinejs" defer></script>
 <x-head />
 <x-navsec />
         <!-- ====== Hero Section Start ====== -->
@@ -17,7 +18,12 @@
         <h2 class="text-2xl font-bold text-center text-gray-800  mb-6">Job Application Form</h2>
 
         @if(session('success'))
-            <div class="mb-4 p-4 bg-green-100 text-green-800 rounded">
+            <div 
+                x-data="{ show: true }" 
+                x-init="setTimeout(() => show = false, 1000)" 
+                x-show="show"
+                class="mb-4 p-4 bg-green-100 text-green-800 rounded"
+            >
                 {{ session('success') }}
             </div>
         @endif

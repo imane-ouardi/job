@@ -34,7 +34,7 @@ class UserResource extends Resource
             ->label('Password')
             ->password()
             ->dehydrateStateUsing(fn ($state) => filled($state) ? Hash::make($state) : null)
-            ->dehydrated(fn ($state) => filled($state)) // لا يتم حفظ الحقل إن لم يتم إدخال قيمة
+            ->dehydrated(fn ($state) => filled($state)) 
             ->required(fn (string $context): bool => $context === 'create')
             ->autocomplete('new-password'),
             Select::make('role')

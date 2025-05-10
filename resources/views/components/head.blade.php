@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="{{ asset('assets/images/logoo.svg') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}" />
   
-    <!-- Tailwind CDN بدل الملف المحلي -->
     <script src="https://cdn.tailwindcss.com"></script>
   
     <!-- ==== WOW JS ==== -->

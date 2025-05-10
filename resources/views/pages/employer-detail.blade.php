@@ -1,4 +1,3 @@
-{{-- resources/views/companies/show.blade.php --}}
 <x-head />
 <x-navsec />
 
@@ -9,12 +8,10 @@
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
         Employer Detail
       </h1>
-      {{-- <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-8 drop-shadow">
-Detail job      </p> --}}
+      
     </div>
   </section>
 @php
-    // Blade-only pagination
     $jobsCollection = $company->jobs;
     $perPage = 5;
     $currentPage = request()->get('page', 1);
@@ -31,7 +28,6 @@ Detail job      </p> --}}
 <section class="bg-gradient-to-br from-blue-50 to-white py-16 min-h-screen">
     <div class="container mx-auto px-6">
         <div class="bg-white shadow-2xl rounded-3xl p-10 md:p-14 max-w-4xl mx-auto">
-            {{-- رأس الشركة --}}
             <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
                 @if($company->logo)
                     <img src="{{ asset('storage/' . $company->logo) }}" alt="Logo" class="w-28 h-28 rounded-2xl object-cover border border-gray-300 shadow-sm">
@@ -51,7 +47,6 @@ Detail job      </p> --}}
                 </div>
             </div>
 
-            {{-- وصف الشركة --}}
             <div class="mb-10">
                 <h2 class="text-xl font-semibold text-gray-700 mb-3">About the Company</h2>
                 <p class="text-gray-600 leading-relaxed text-justify">
@@ -59,7 +54,6 @@ Detail job      </p> --}}
                 </p>
             </div>
 
-            {{-- الوظائف --}}
             <div>
                 <h2 class="text-xl font-semibold text-gray-700 mb-4">Open Positions</h2>
                 @if($jobs->isEmpty())
@@ -74,14 +68,12 @@ Detail job      </p> --}}
                                         <p class="text-gray-500 text-sm">{{ $job->location }}</p>
                                     @endif
                                 </div>
-                                <a href="{{ route('jobs.show', $job->id) }}"
-                                   class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition">
-                                    Apply Now
+                                <a href="{{ auth()->check() ? route('applications.create', $job->id) : url("/employee/login")}}"    class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                                Apply Now
                                 </a>
                             </div>
                         @endforeach
                     </div>
-                    {{-- روابط التصفح --}}
                     <div class="mt-6">
                         {{ $jobs->links() }}
                     </div>

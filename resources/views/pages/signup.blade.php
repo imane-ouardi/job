@@ -89,9 +89,7 @@
     </a>
     <!-- ====== Back To Top End -->
 
-    <!-- ====== Made With Button Start -->
-
-    <!-- ====== Made With Button End -->
+  
 
     <!-- ====== All Scripts -->
     <script src="assets/js/main.js"></script>

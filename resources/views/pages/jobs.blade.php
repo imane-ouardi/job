@@ -130,7 +130,7 @@
                         <div class="flex items-center">
                           <div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-lg mr-3">
                             <img class="w-8 h-8" alt=""
-                              src="{{ $job->company?->logo ? asset('storage/' . $job->company->logo) : '/assets/default-logo.png' }}">
+                              src="{{ asset('storage/' . $job->company->logo) }}">
                           </div>
                           <div>
                             <a class="block text-lg font-bold text-blue-900 hover:text-blue-600 transition"

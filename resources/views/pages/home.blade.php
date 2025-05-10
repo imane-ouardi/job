@@ -99,14 +99,6 @@
     <x-about/>
     <!-- ====== About Section End -->
 
-    <!-- ====== CTA Section Start -->
-  
-    <!-- ====== CTA Section End -->
-
-    <!-- ====== Pricing Section Start -->
-
-    {{-- <x-pricing/> --}}
-    <!-- ====== Pricing Section End -->
 
     <!-- ====== Testimonial Section Start -->
 
@@ -114,89 +106,14 @@
 
     <!-- ====== Testimonial Section End -->
 
-    <!-- ====== FAQ Section Start -->
 
-    
-
-    <!-- ====== FAQ Section End -->
-
-    <!-- ====== Team Section Start -->
-    
-    <!-- ====== Team Section End -->
-
-    <!-- ====== Blog Section Start -->
-    {{-- <section class="relative bg-slate-50  md:py-24 py-16">
-        <div class="container px-4 mx-auto">
-            <div class="grid grid-cols-1 pb-8 text-center">
-                <h3 class="mb-4 md:text-[26px] md:leading-normal text-2xl leading-normal font-semibold text-blue-600 ">
-                    Recent News Articles
-                </h3>
-                <p class="text-sla max-w-xl mx-auto">
-                    Fresh job related news content posted each day.
-                </p>
-            </div>
-            <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mt-8">
-                <!-- News Block 1 -->
-                <div class="bg-white  rounded-lg shadow-md overflow-hidden flex flex-col">
-                    <img src="/assets/images/blog/news-1.jpg" alt="News 1" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-1 flex flex-col">
-                        <ul class="flex text-xs text-slate-400 mb-2 space-x-4 rtl:space-x-reverse">
-                            <li>August 31, 2021</li>
-                            <li>12 Comments</li>
-                        </ul>
-                        <h3 class="text-lg font-semibold mb-2">
-                            <a href="blog-single.html" class="hover:text-blue-600 transition">Attract Sales And Profits</a>
-                        </h3>
-                        <p class="text-slate-600  flex-1">A job ravenously while Far much that one rank beheld after outside....</p>
-                        <a href="#" class="mt-4 inline-flex items-center text-blue-600 hover:underline font-medium">Read More <i class="fa fa-angle-right ms-1"></i></a>
-                    </div>
-                </div>
-                <!-- News Block 2 -->
-                <div class="bg-white  rounded-lg shadow-md overflow-hidden flex flex-col">
-                    <img src="/assets/images/blog/news-2.jpg" alt="News 2" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-1 flex flex-col">
-                        <ul class="flex text-xs text-slate-400 mb-2 space-x-4 rtl:space-x-reverse">
-                            <li>August 31, 2021</li>
-                            <li>12 Comments</li>
-                        </ul>
-                        <h3 class="text-lg font-semibold mb-2">
-                            <a href="blog-single.html" class="hover:text-blue-600 transition">5 Tips For Your Job Interviews</a>
-                        </h3>
-                        <p class="text-slate-600  flex-1">A job ravenously while Far much that one rank beheld after outside....</p>
-                        <a href="#" class="mt-4 inline-flex items-center text-blue-600 hover:underline font-medium">Read More <i class="fa fa-angle-right ms-1"></i></a>
-                    </div>
-                </div>
-                <!-- News Block 3 -->
-                <div class="bg-white  rounded-lg shadow-md overflow-hidden flex flex-col">
-                    <img src="/assets/images/blog/news-3.jpg" alt="News 3" class="w-full h-48 object-cover">
-                    <div class="p-6 flex-1 flex flex-col">
-                        <ul class="flex text-xs text-slate-400 mb-2 space-x-4 rtl:space-x-reverse">
-                            <li>August 31, 2021</li>
-                            <li>12 Comments</li>
-                        </ul>
-                        <h3 class="text-lg font-semibold mb-2">
-                            <a href="blog-single.html" class="hover:text-blue-600 transition">An Overworked Newspaper Editor</a>
-                        </h3>
-                        <p class="text-slate-600  flex-1">A job ravenously while Far much that one rank beheld after outside....</p>
-                        <a href="#" class="mt-4 inline-flex items-center text-blue-600 hover:underline font-medium">Read More <i class="fa fa-angle-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-  
-    <!-- ====== Blog Section End -->
 
     <!-- ====== Contact Start ====== -->
     <x-contact/>
 
     <!-- ====== Contact End ====== -->
 
-    <!-- ====== Brands Section Start -->
-    
-
-    <!-- ====== Brands Section End -->
-
+   
     <!-- ====== Footer Section Start -->
     <x-footer/>
     <!-- ====== Footer Section End -->
@@ -213,9 +130,7 @@
     </a>
     <!-- ====== Back To Top End -->
 
-    <!-- ====== Made With Button Start -->
-  
-    <!-- ====== Made With Button End -->
+   
 
     <!-- ====== All Scripts -->
 

@@ -30,10 +30,11 @@
                     </a>
                 </div>
             @else
-                <a href="{{ auth()->user()?->role }}"
-                    class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70">
-                    profile
-                </a>
+            <a href="{{ filament()->getPanel(auth()->user()?->role)?->getUrl() }}"
+                class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70">
+                 Profile
+             </a>
+             
             @endif
         </div>
 

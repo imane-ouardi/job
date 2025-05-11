@@ -33,7 +33,7 @@
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
                             <div class="size-14 flex items-center justify-center bg-white  shadow-sm shadow-gray-200  rounded-md">
-                                <img class="size-8" alt="" src="{{ $job->company->logo ?? '/assets/default-logo.png' }}">
+                                <img class="size-8" alt="" src="{{ asset('storage/' . $job->company->logo) }}">
                             </div>
                             <div class="ms-3">
                                 <a class="block text-[16px] font-semibold hover:text-blue-900 transition-all duration-500"

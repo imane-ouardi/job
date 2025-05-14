@@ -90,7 +90,7 @@ class JobResource extends Resource
         DatePicker::make('deadline')
             ->label('Application Deadline')
             ->required()
-            ->after('today'), // يجب أن يكون بعد اليوم
+            ->after('today'), 
     ]);
 }
 

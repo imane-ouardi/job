@@ -30,8 +30,9 @@ class EmployerPanelProvider extends PanelProvider
             ])
             ->login()
             ->registration(
-                
-            )
+            
+          )
+            
             ->brandLogo("/assets/images/logo/logoo.svg")->brandLogoHeight("30px")->homeUrl("/")
             ->profile()
             ->discoverResources(in: app_path('Filament/Employer/Resources'), for: 'App\\Filament\\Employer\\Resources')

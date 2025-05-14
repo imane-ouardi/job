@@ -50,11 +50,9 @@ class JobApplicationForm extends Component
     {
         $validated = $this->validate();
 
-        // رفع الملفات
         $cvPath = $this->cv->store('applications/cv', 'public');
         $extraFilePath = $this->extra_file ? $this->extra_file->store('applications/extra', 'public') : null;
 
-        // حفظ البيانات في قاعدة البيانات (مثال)
         \App\Models\Application::create([
             'job_id'       => $this->jobId,
             'user_id'      => $this->userId,
@@ -69,7 +67,6 @@ class JobApplicationForm extends Component
             'cover_letter' => $this->cover_letter,
         ]);
 
-        // إعادة تعيين الحقول
         $this->reset([
             'full_name', 'email', 'phone', 'education', 'experience',
             'skills', 'cv', 'extra_file', 'cover_letter', 'terms'

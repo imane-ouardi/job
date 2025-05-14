@@ -13,7 +13,7 @@
     <!-- ====== Hero Section End ====== -->
     <section id="contact" class="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-100">
       <div class="container mx-auto px-4 ">
-        <div class="flex flex-nowrap lg:flex-nowrap items-center gap-16">
+        <div class="flex flex-col lg:flex-row flex-wrap items-center gap-16">
           <div class="w-full lg:w-1/2 bg-white rounded-2xl shadow-2xl p-10 md:p-14 flex flex-col justify-center">
             <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-4 text-center">
               Get in Touch

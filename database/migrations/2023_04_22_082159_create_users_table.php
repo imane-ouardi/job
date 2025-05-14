@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('role')->default('employee');
             $table->string('profile_photo')->nullable();
+            $table->foreignId('company_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();
 
         });

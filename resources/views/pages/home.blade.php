@@ -115,7 +115,6 @@
 
    
     <!-- ====== Footer Section Start -->
-    <x-footer/>
     <!-- ====== Footer Section End -->
 
     <!-- ====== Back To Top Start -->

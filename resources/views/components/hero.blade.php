@@ -14,7 +14,7 @@
   </div>
   <div class="w-full flex justify-center z-10">
       <img
-          src="assets/images/hero/bgMan.webp"
+          src="/assets/images/hero/bgMan.webp"
           alt="hero"
           class="max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl rounded-xl shadow-lg pb-12"
           style="object-fit:cover;"

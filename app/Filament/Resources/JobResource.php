@@ -23,34 +23,53 @@ class JobResource extends Resource
     protected static ?string $navigationLabel = 'Jobs';
 
     public static function form(Form $form): Form
-    {
-        return $form->schema([
-            TextInput::make('title')->required(),
-            Textarea::make('description')->required(),
-            TextInput::make('location')->required(),
-            TextInput::make('salary')
-                ->numeric()
-                ->nullable()
-                ->rules('min:1000'),
-            Select::make('currency')
-                ->options([
-                    'MAD' => 'MAD',
-                ])
-                ->default('MAD')
-                ->required(),
-            Select::make('type')->options([
+{
+    return $form->schema([
+        TextInput::make('title')
+            ->required()
+            ->maxLength(255),
+
+        Textarea::make('description')
+            ->required()
+            ->maxLength(2000),
+
+        TextInput::make('location')
+            ->required()
+            ->maxLength(255),
+
+        TextInput::make('salary')
+            ->numeric()
+            ->nullable()
+            ->minValue(1000)
+            ->maxValue(50000),
+
+        Select::make('currency')
+            ->options([
+                'MAD' => 'MAD',
+            ])
+            ->default('MAD')
+            ->required(),
+
+        Select::make('type')
+            ->options([
                 'Full-time' => 'Full-time',
                 'Part-time' => 'Part-time',
                 'Contract' => 'Contract',
                 'Internship' => 'Internship',
                 'Remote' => 'Remote',
-            ])->required(),
-            Select::make('company_id')->relationship('company', 'name')->required(),
-            DatePicker::make('deadline')
-                ->required()
-                ->rules(['after_or_equal:today']),
-        ]);
-    }
+            ])
+            ->required(),
+
+        Select::make('company_id')
+            ->relationship('company', 'name')
+            ->required(),
+
+        DatePicker::make('deadline')
+            ->required()
+            ->afterOrEqual(today()),
+    ]);
+}
+
 
     public static function table(Table $table): Table
     {

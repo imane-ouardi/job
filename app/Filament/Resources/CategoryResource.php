@@ -23,13 +23,18 @@ class CategoryResource extends Resource
         return $form->schema([
             TextInput::make('name')
                 ->required()
-                ->maxLength(255),
-
+                ->maxLength(255)
+                ->unique(ignoreRecord: true), 
+    
             TextInput::make('slug')
                 ->required()
-                ->maxLength(255),
+                ->maxLength(255)
+                ->unique(ignoreRecord: true)
+                ->regex('/^[a-z0-9-]+$/i') 
+                ->helperText('Only letters, numbers, and dashes are allowed.'),
         ]);
     }
+    
 
     public static function table(Tables\Table $table): Tables\Table
     {

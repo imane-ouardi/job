@@ -31,7 +31,7 @@ class EmployeePanelProvider extends PanelProvider
             ->login()
             ->registration()
             ->profile()
-            ->brandLogo("/jobportal.webp")->brandLogoHeight("60px")->homeUrl("/")
+            ->brandLogo("/assets/images/logo/logoo.svg")->brandLogoHeight("30px")->homeUrl("/")
             ->discoverResources(in: app_path('Filament/Employee/Resources'), for: 'App\\Filament\\Employee\\Resources')
             ->discoverPages(in: app_path('Filament/Employee/Pages'), for: 'App\\Filament\\Employee\\Pages')
             ->pages([

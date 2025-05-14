@@ -1,6 +1,5 @@
-<x-head/>
-<x-navsec/>
-
+@extends('layouts.app')
+@section('content')
 <!-- ====== Hero Section Start ====== -->
 <section class="relative w-full min-h-[60vh] flex flex-col justify-center bg-gradient-to-br from-blue-700 via-blue-900 to-blue-700 bg-cover">
     <div class="absolute inset-0 bg-blue-900/80"></div>
@@ -13,12 +12,12 @@
 </section>
 <!-- ====== Hero Section End ====== -->
 
-<section class="bg-slate-50  md:py-24 py-16">
+<section class="bg-slate-50 px-20 md:py-24 py-16">
     <div class="container mt-10">
         <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
             <!-- Sidebar: Company Info -->
             <div class="lg:col-span-4 md:col-span-6">
-                <div class="p-8 shadow-lg rounded-xl bg-white  sticky top-20 flex flex-col items-center">
+                <div class="p-8 shadow-lg rounded-xl bg-white top-20 flex flex-col items-center">
                     <img class="rounded-full size-32 p-2 bg-white shadow-md border-4 border-blue-100" alt="logo"
                          src="{{$job->company?->logo ? asset('storage/' .$job->company?->logo) : '/assets/default-logo.png' }}">
                     <h3 class="text-2xl font-bold mt-4 text-blue-900 ">{{$job->company?->name }}</h3>
@@ -41,7 +40,7 @@
                 </div>
             </div>
             <!-- Main Content: Job Info -->
-            <div class="lg:col-span-8 md:col-span-6">
+            <div class="lg:col-span-8 md:col-span-6 ">
                 <div class="bg-white  rounded-xl shadow-lg p-8">
                     <h2 class="text-3xl font-bold text-blue-900  mb-4">{{ $job->title }}</h2>
                     <div class="flex flex-wrap gap-4 mb-6">
@@ -71,7 +70,6 @@
                                 <li>Relevant degree</li>
                                 <li>Previous experience in the field</li>
                                 <li>Excellent communication skills</li>
-                                <!-- Add more as needed -->
                             </ul>
                         </div>
                         <div>
@@ -80,7 +78,6 @@
                                 <li>Motivating work environment</li>
                                 <li>Competitive salaries</li>
                                 <li>Health insurance</li>
-                                <!-- Add more as needed -->
                             </ul>
                         </div>
                     </div>
@@ -93,4 +90,4 @@
         </div>
     </div>
 </section>
-<x-footer/>
+@endsection

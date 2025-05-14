@@ -1,9 +1,11 @@
+{{-- @extends('layouts.app') --}}
+
 <div class="absolute top-0 left-0 z-40 w-full bg-blue-900">
     <div class="container mx-auto flex items-center justify-between px-4 py-4">
         <!-- Logo -->
         <div class="w-48">
             <a href="{{ route('home') }}" class="block">
-                <img src="assets/images/logo/logoo.svg" alt="logo" class="h-12 w-auto" />
+                <img src="/assets/images/logo/logo1.svg" alt="logo" class="h-12 w-auto" />
             </a>
         </div>
 

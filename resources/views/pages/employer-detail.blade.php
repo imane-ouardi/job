@@ -1,6 +1,5 @@
-<x-head />
-<x-navsec />
-
+@extends('layouts.app')
+@section('content')
 
 <section class="relative w-full min-h-[60vh] flex flex-col justify-center bg-gradient-to-br from-blue-700 via-blue-900 to-blue-700 bg-cover">
     <div class="absolute inset-0 bg-blue-900/80"></div>
@@ -82,5 +81,4 @@
         </div>
     </div>
 </section>
-
-<x-footer />
+@endsection

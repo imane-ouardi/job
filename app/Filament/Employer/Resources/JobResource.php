@@ -27,66 +27,73 @@ class JobResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Forms\Form $form): Forms\Form
-    {
-        return $form->schema([
-            TextInput::make('title')
-                ->label('Title')
-                ->placeholder('CEO')
-                ->required()
-                ->maxLength(255),
-            Textarea::make('description')
-                ->required()
-                ->rows(5),
-            TextInput::make('location')
-                ->label('Location')
-                ->placeholder('Winter Park, Florida')
-                ->required()
-                ->maxLength(255),
-                Forms\Components\TextInput::make('salary')
-                ->label('Salary')
-                ->numeric()
-                ->min(1000)
-                ->max(50000)
-                ->required()
-                ->helperText('Salary must be between 1000 and 50000'),
-            
-            Forms\Components\Select::make('currency')
-                ->label('Currency')
-                ->options([
-                    'MAD' => 'MAD',
-                    'USD' => 'USD',
-                    'EUR' => 'EUR',
-                ])
-                ->default('MAD')
-                ->required(),
-            
-            Select::make('type')
-                ->options([
-                    'full-time' => 'Full Time',
-                    'part-time' => 'Part Time',
-                    'remote' => 'Remote',
-                    'internship' => 'Internship',
-                ])
-                ->required(),
+{
+    return $form->schema([
+        TextInput::make('title')
+            ->label('Title')
+            ->placeholder('CEO')
+            ->required()
+            ->maxLength(255),
 
-            Select::make('category_id')
-                ->label('Category')
-                ->relationship('category', 'name')
-                ->searchable()
-                ->required(),
+        Textarea::make('description')
+            ->label('Description')
+            ->required()
+            ->rows(5)
+            ->maxLength(2000),
 
-            Select::make('company_id')
-                ->label('Company')
-                ->relationship('company', 'name')
-                ->searchable()
-                ->required(),
+        TextInput::make('location')
+            ->label('Location')
+            ->placeholder('Winter Park, Florida')
+            ->required()
+            ->maxLength(255),
 
-            DatePicker::make('deadline')
-                ->label('Application Deadline')
-                ->required()
-                ->after('today'),
-        ]);
-    }
+        TextInput::make('salary')
+            ->label('Salary')
+            ->numeric()
+            ->minValue(1000)
+            ->maxValue(50000)
+            ->required()
+            ->helperText('Salary must be between 1000 and 50000'),
+
+        Select::make('currency')
+            ->label('Currency')
+            ->options([
+                'MAD' => 'MAD',
+                'USD' => 'USD',
+                'EUR' => 'EUR',
+            ])
+            ->default('MAD')
+            ->required(),
+
+        Select::make('type')
+            ->label('Type')
+            ->options([
+                'full-time' => 'Full Time',
+                'part-time' => 'Part Time',
+                'remote' => 'Remote',
+                'internship' => 'Internship',
+            ])
+            ->required(),
+
+        Select::make('category_id')
+            ->label('Category')
+            ->relationship('category', 'name')
+            ->searchable()
+            ->required(),
+
+        Select::make('company_id')
+            ->label('Company')
+            ->relationship('company', 'name')
+            ->searchable()
+            ->required(),
+
+        DatePicker::make('deadline')
+            ->label('Application Deadline')
+            ->required()
+            ->after('today'), // يجب أن يكون بعد اليوم
+    ]);
+}
+
 
     public static function table(Tables\Table $table): Tables\Table
     {

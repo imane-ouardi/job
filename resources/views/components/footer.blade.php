@@ -2,7 +2,7 @@
     <div class="container mx-auto px-4 flex flex-wrap justify-between items-start gap-8">
         <!-- Logo & Description -->
         <div class="flex flex-col items-center md:items-start mb-8 md:mb-0">
-            <img src="/assets/images/logo/logoo.svg" alt="Logo" class="mb-4 w-28">
+            <img src="/assets/images/logo/logo1.svg" alt="Logo" class="mb-4 w-38">
             <p class="text-slate-200 max-w-xs text-center md:text-left">
                 Discover thousands of jobs and start your career journey with us. We connect talents with top companies.
             </p>

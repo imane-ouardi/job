@@ -3,7 +3,7 @@
         <div class="relative flex items-center justify-between -mx-4">
             <div class="max-w-full px-4 w-60">
                 <a href="{{ route('home') }}" class="block w-full py-5 navbar-logo">
-                    <img src="assets/images/logo/logoo.svg" alt="logo" class="  header-logo" />
+                    <img src="/assets/images/logo/logo1.svg" alt="logo" class="  header-logo" />
                 </a>
             </div>
             <div class="flex items-center justify-between w-241 ">
@@ -18,20 +18,20 @@
                         class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg  lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none  xl:px-6">
                         <ul class="blcok lg:flex 2xl:ml-20">
                             <li class="relative group">
-                                <a href="#home"
-                                    class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary d lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70">
+                                <a href="/"
+                                    class="flex py-2 mx-8 text-base font-medium text-dark group-hover:text-primary d lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70">
                                     Home
                                 </a>
                             </li>
                             <li class="relative group">
-                                <a href="#Jobs"
-                                    class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary d lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
+                                <a href="/jobs"
+                                    class="flex py-2 mx-8 text-base font-medium text-dark group-hover:text-primary d lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
                                     Find job
                                 </a>
                             </li>
                             <li class="relative group">
-                                <a href="#about"
-                                    class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary d lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
+                                <a href="/about"
+                                    class="flex py-2 mx-8 text-base font-medium text-dark group-hover:text-primary d lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
                                     About
                                 </a>
                             </li>
@@ -39,8 +39,8 @@
                         
                             </li>
                             <li class="relative group">
-                                <a href="#contact"
-                                    class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary 
+                                <a href="/contact"
+                                    class="flex py-2 mx-8 text-base font-medium text-dark group-hover:text-primary 
                 d lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white 
                 lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10">
                                     Contact
@@ -66,10 +66,10 @@
                             </a>
                         </div>
                     @else
-                        <a href="{{ auth()->user()?->role }}"
-                            class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70">
-                            profile
-                        </a>
+                    <a href="{{ filament()->getPanel(auth()->user()?->role)?->getUrl() }}"
+                        class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70">
+                         Profile
+                     </a>
                     @endif
                 </div>
             </div>

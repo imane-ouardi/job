@@ -24,27 +24,31 @@ class CompanyResource extends Resource
         return $form->schema([
             TextInput::make('name')
                 ->required()
-                ->maxLength(255),
-
+                ->maxLength(255)
+                ->unique(ignoreRecord: true),
+    
             TextInput::make('email')
                 ->email()
                 ->required()
-                ->maxLength(255),
-
+                ->maxLength(255)
+                ->unique(ignoreRecord: true),
+    
             TextInput::make('website')
                 ->url()
                 ->nullable()
                 ->maxLength(255),
-
+    
             TextInput::make('location')
                 ->nullable()
                 ->maxLength(255),
-
+    
             Textarea::make('description')
                 ->rows(5)
-                ->nullable(),
+                ->nullable()
+                ->maxLength(2000),
         ]);
     }
+    
 
     public static function table(Tables\Table $table): Tables\Table
     {

@@ -20,47 +20,63 @@ class ApplicationResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    public static function form(Form $form): Form
-    {
-        return $form
-        ->schema([
-            Forms\Components\TextInput::make('full_name')
-                ->label('Full Name')
-                ->required(),
-            Forms\Components\TextInput::make('email')
-                ->label('Email')
-                ->email()
-                ->required(),
-            Forms\Components\TextInput::make('phone')
-                ->label('Phone')
-                ->required(),
-            Forms\Components\TextInput::make('education')
-                ->label('Education'),
-            Forms\Components\Textarea::make('experience')
-                ->label('Experience'),
-            Forms\Components\Textarea::make('skills')
-                ->label('Skills'),
-            Forms\Components\FileUpload::make('cv')
-                ->label('CV')
-                ->directory('cvs')
-                ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
-                ->maxSize(2048),
-            Forms\Components\FileUpload::make('extra_file')
-                ->label('Extra File')
-                ->directory('extra_files'),
-            Forms\Components\Textarea::make('cover_letter')
-                ->label('Cover Letter')
-                ->required(),
-            Forms\Components\Select::make('status')
-                ->label('Status')
-                ->options([
-                    'pending' => 'Pending',
-                    'accepted' => 'Accepted',
-                    'rejected' => 'Rejected',
-                ])
-                ->default('pending'),
-        ]);
-    }
+        public static function form(Form $form): Form
+        {
+            return $form
+                ->schema([
+                    Forms\Components\TextInput::make('full_name')
+                        ->label('Full Name')
+                        ->required()
+                        ->maxLength(255),
+        
+                    Forms\Components\TextInput::make('email')
+                        ->label('Email')
+                        ->email()
+                        ->required()
+                        ->maxLength(255),
+        
+                    Forms\Components\TextInput::make('phone')
+                        ->label('Phone')
+                        ->required()
+                        ->maxLength(20),
+        
+                    Forms\Components\TextInput::make('education')
+                        ->label('Education')
+                        ->maxLength(255),
+        
+                    Forms\Components\Textarea::make('experience')
+                        ->label('Experience')
+                        ->maxLength(2000),
+        
+                    Forms\Components\Textarea::make('skills')
+                        ->label('Skills')
+                        ->maxLength(1000),
+        
+                    Forms\Components\FileUpload::make('cv')
+                        ->label('CV')
+                        ->directory('cvs')
+                        ->acceptedFileTypes([
+                            'application/pdf',
+                            'application/msword',
+                            'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+                        ])
+                        ->maxSize(2048)
+                        ->required(),
+        
+                    Forms\Components\FileUpload::make('extra_file')
+                        ->label('Extra File')
+                        ->directory('extra_files')
+                        ->maxSize(4096),
+        
+                    Forms\Components\Textarea::make('cover_letter')
+                        ->label('Cover Letter')
+                        ->required()
+                        ->maxLength(2000),
+        
+                   
+                ]);
+        }
+        
 
     public static function table(Table $table): Table
     {

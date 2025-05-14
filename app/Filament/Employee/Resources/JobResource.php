@@ -23,9 +23,56 @@ class JobResource extends Resource
     {
         return $form
             ->schema([
-                
+                Forms\Components\TextInput::make('title')
+                    ->label('Job Title')
+                    ->required()
+                    ->maxLength(255),
+    
+                Forms\Components\Select::make('company_id')
+                    ->label('Company')
+                    ->relationship('company', 'name')
+                    ->required(),
+                    
+    
+                Forms\Components\Select::make('type')
+                    ->label('Type')
+                    ->options([
+                        'Full-time' => 'Full-time',
+                        'Part-time' => 'Part-time',
+                        'Contract' => 'Contract',
+                        'Internship' => 'Internship',
+                        'Remote' => 'Remote',
+                    ])
+                    ->required(),
+    
+                Forms\Components\TextInput::make('location')
+                    ->label('Location')
+                    ->required()
+                    ->maxLength(255),
+    
+                Forms\Components\TextInput::make('salary')
+                    ->label('Salary')
+                    ->numeric()
+                    ->required()
+                    ->minValue(0),
+    
+                Forms\Components\TextInput::make('currency')
+                    ->label('Currency')
+                    ->required()
+                    ->maxLength(10),
+    
+                Forms\Components\DatePicker::make('deadline')
+                    ->label('Deadline')
+                    ->required()
+                    ->afterOrEqual(today()),
+    
+                Forms\Components\Textarea::make('description')
+                    ->label('Description')
+                    ->required()
+                    ->maxLength(2000),
             ]);
     }
+    
 
     public static function table(Table $table): Table
     {
@@ -93,8 +140,7 @@ class JobResource extends Resource
     {
         return [
             'index' => Pages\ListJobs::route('/'),
-            'create' => Pages\CreateJob::route('/create'),
-            'edit' => Pages\EditJob::route('/{record}/edit'),
+            
         ];
     }
 

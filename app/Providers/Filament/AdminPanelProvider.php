@@ -28,7 +28,7 @@ class AdminPanelProvider extends PanelProvider
             ->login()
             ->registration()
             ->profile()
-            ->brandLogo("/jobportal.webp")->brandLogoHeight("60px")->homeUrl("/")
+            ->brandLogo("/assets/images/logo/logoo.svg")->brandLogoHeight("30px")->homeUrl("/")
             ->colors([
                 'primary' => Color::Blue,
             ])

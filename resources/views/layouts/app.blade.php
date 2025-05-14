@@ -7,18 +7,16 @@
     <title>@yield('title', 'Job Portal')</title>
 
     {{-- CSS --}}
-    <link rel="shortcut icon" href="{{ asset('assets/images/logoo.svg') }}" type="image/x-icon">
-
-    <link rel="shortcut icon" href="{{ asset('images/logoo.svg') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('/assets/images/logoo.svg') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-
   
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}" />
+
     <!-- ==== WOW JS ==== -->
     <script src="{{ asset('js/wow.min.js') }}"></script>
     <script>
@@ -33,16 +31,33 @@
 
 <body class=" bg-white text-body  ">
 
-    @yield('content')
-
-    {{-- JavaScript --}}
-    <script src="{{ asset('assets/js/main.js') }}"></script>
-
+    <!-- ====== Navbar Section Start -->
+    <x-navbar/>
+    <!-- ====== Navbar Section End -->
+    <div id="root">
+        @yield('content')
+    </div>
     {{-- Livewire Scripts --}}
     @livewireScripts
 
+    <!-- ====== Footer Section Start -->
+    <x-footer/>
+    <!-- ====== Footer Section End -->
+
+    <!-- ====== Back To Top Start -->
+    <a
+      href="javascript:void(0)"
+      class="fixed left-auto items-center justify-center hidden w-10 h-10 text-white transition duration-300 ease-in-out rounded-md shadow-md back-to-top bottom-8 right-8 z-999 bg-primary hover:bg-dark"
+    >
+      <span
+        class="mt-[6px] h-3 w-3 rotate-45 border-l border-t border-white"
+      ></span>
+    </a>
+    <!-- ====== Back To Top End -->
+
+    {{-- JavaScript --}}
     <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
     <script>
         // ==== for menu scroll
         const pageLink = document.querySelectorAll(".ud-menu-scroll");
@@ -114,5 +129,4 @@
         });
     </script>
 </body>
-
 </html>

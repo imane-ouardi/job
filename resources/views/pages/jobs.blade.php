@@ -1,8 +1,6 @@
-<x-head/>
-<body >
-  <div id="root">
-    <x-navsec/>
 
+@extends('layouts.app')
+@section('content')
     <!-- ====== Hero Section Start ====== -->
     <section class="relative w-full min-h-[60vh] flex flex-col justify-center bg-gradient-to-br from-blue-700 via-blue-900 to-blue-700 bg-cover">
       <div class="absolute inset-0 bg-blue-900/80"></div>
@@ -29,10 +27,10 @@
         <!-- ====== Jobs & Filters Section ====== -->
         <section class="relative md:py-24 py-16 bg-gray-50 ">
           <div class="container mx-auto px-16">
-            <div class="grid md:grid-cols-12 grid-cols-1 gap-8">
+            <div class="grid md:grid-cols-12 grid-cols-1 gap-8 relative">
               <!-- Sidebar Filters -->
-              <aside class="lg:col-span-4 md:col-span-6">
-                <div class="shadow-lg p-8 rounded-xl bg-white  sticky top-20 space-y-6">
+              <aside class="lg:col-span-4 md:col-span-6 relative">
+                <div class="shadow-lg p-8 rounded-xl bg-white  space-y-6">
                   <form method="GET" action="{{ route('jobs.index') }}">
                     <div class="space-y-5">
                       <!-- Search Company -->
@@ -218,7 +216,4 @@
       </div>
     </section>
 
-    <x-footer/>
-  </div>
-</body>
-
+@endsection

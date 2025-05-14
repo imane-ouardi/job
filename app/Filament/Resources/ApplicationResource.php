@@ -30,24 +30,28 @@ class ApplicationResource extends Resource
                 ->searchable()
                 ->required()
                 ->label('Applicant'),
-
+    
             Select::make('job_id')
                 ->relationship('job', 'title')
                 ->searchable()
                 ->required()
                 ->label('Job'),
-
+    
             Textarea::make('cover_letter')
                 ->rows(5)
                 ->label('Cover Letter')
+                ->maxLength(2000) 
                 ->nullable(),
-
+    
             FileUpload::make('resume')
                 ->directory('resumes')
                 ->label('Resume')
+                ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
+                ->maxSize(2048) 
                 ->nullable(),
         ]);
     }
+    
 
     public static function table(Tables\Table $table): Tables\Table
     {

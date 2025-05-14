@@ -1,15 +1,6 @@
-<!doctype html>
-<html lang="en">
-<x-head />
+@extends('layouts.app')
+@section('content')
 
-
-<body>
-    <!-- ====== Navbar Section Start -->
-    <x-navsec />
-    <!-- ====== Navbar Section End -->
-
-    <!-- ====== Hero Section Start ====== -->
-    <!-- ====== Hero Section Start ====== -->
     <section
         class="relative w-full min-h-[60vh] flex flex-col justify-center bg-gradient-to-br from-blue-700 via-blue-900 to-blue-700 bg-cover">
         <div class="absolute inset-0 bg-blue-900/80"></div>
@@ -52,8 +43,8 @@
                         class="relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white -2 py-14 px-8 text-center sm:px-12 md:px-[60px]">
                         <div class="mb-10 text-center">
                             <a href="javascript:void(0)" class="mx-auto inline-block max-w-[160px]">
-                                <img src="assets/images/logo/logoo.svg" alt="logo" class="" />
-                                <img src="assets/images/logo/logoo.svg" alt="logo" class="hidden " />
+                                <img src="/assets/images/logo/logoo.svg" alt="logo" class="" />
+                                <img src="/assets/images/logo/logoo.svg" alt="logo" class="hidden " />
                             </a>
                         </div>
 
@@ -81,22 +72,4 @@
         </div>
     </section>
 
-    <!-- ====== Forms Section End -->
-
-    <!-- ====== Footer Section Start -->
-    <x-footer />
-    <!-- ====== Footer Section End -->
-
-    <!-- ====== Back To Top Start -->
-    <a href="javascript:void(0)"
-        class="fixed left-auto items-center justify-center hidden w-10 h-10 text-white transition duration-300 ease-in-out rounded-md shadow-md back-to-top bottom-8 right-8 z-999 bg-primary hover:bg-dark">
-        <span class="mt-[6px] h-3 w-3 rotate-45 border-t border-l border-white"></span>
-    </a>
-    <!-- ====== Back To Top End -->
-
-   
-    <!-- ====== All Scripts -->
-    <script src="assets/js/main.js"></script>
-</body>
-
-</html>
+@endsection
